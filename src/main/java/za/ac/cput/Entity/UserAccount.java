@@ -3,7 +3,7 @@ package za.ac.cput.Entity;
 /* UserAccount.java Class
  * Entity for UserAccount
  * Author: Tashreeq Williams (217290671)
- * Date: 1 June 2021
+ * Date: 1st June 2021
  */
 
 public class UserAccount {
