@@ -1,5 +1,12 @@
 package za.ac.cput.Entity;
 
+/*
+@Author : Lindokuhle Xaki 215041720
+ Auditor class
+date 1 June 2021
+*/
+
+
 public class Auditor {
 
     private String auditorID;
@@ -11,9 +18,7 @@ public class Auditor {
     private Auditor(Builder builder) {
         this.auditorID = builder.auditorID;
         this.auditorFirstName = builder.auditorFirstName;
-        ;
         this.auditorSurname = builder.auditorSurname;
-        ;
         this.cellphone = builder.cellphone;
     }
 
