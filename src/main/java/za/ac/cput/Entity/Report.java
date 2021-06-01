@@ -1,5 +1,10 @@
 package za.ac.cput.Entity;
 
+/*
+ Entity for Report
+ Author: Mlungisi Xakekile (215126505)
+ Date: 01 June 2021
+*/
 
 public class Report {
     private String reportId, reportAuth, reportDate;
