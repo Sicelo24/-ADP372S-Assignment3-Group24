@@ -1,8 +1,9 @@
 package za.ac.cput.Entity;
 /*
-@Author : Lindokuhle Xaki 215041720
- Auditor class
-date 1 June 2021
+        @Author : Lindokuhle Xaki 215041720
+        Auditor class
+        date 1 June 2021
+
 */
 
 @SuppressWarnings("ALL")
