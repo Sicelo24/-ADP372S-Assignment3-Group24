@@ -5,9 +5,10 @@ package za.ac.cput.Entity;
 date 1 June 2021
 */
 
+@SuppressWarnings("ALL")
+
 public class Auditor {
-
-
+    @SuppressWarnings("CanBeFinal")
 
     private String auditorID;
     private String auditorFirstName;
@@ -57,22 +58,19 @@ public class Auditor {
         private String cellphone;
 
 
-        public Builder setAuditorID(String auditorID) {
-            this.auditorID = auditorID;
+        public Builder auditorID(String auditorFirstName){
+            this.auditorID = auditorFirstName;
             return this;
         }
-
-        public Builder setAuditorFirstName(String auditorFirstName) {
+        public Builder auditorFirstName(String auditorFirstName){
             this.auditorFirstName = auditorFirstName;
             return this;
         }
-
-        public Builder setAuditorSurname(String auditorSurname) {
+        public Builder auditorSurname(String auditorSurname){
             this.auditorSurname = auditorSurname;
             return this;
         }
-
-        public Builder setCellphone(String cellphone) {
+        public Builder cellphone(String cellphone){
             this.cellphone = cellphone;
             return this;
         }
