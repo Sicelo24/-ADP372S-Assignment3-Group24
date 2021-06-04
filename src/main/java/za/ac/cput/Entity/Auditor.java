@@ -1,13 +1,15 @@
 package za.ac.cput.Entity;
-
 /*
-@Author : Lindokuhle Xaki 215041720
- Auditor class
-date 1 June 2021
+        @Author : Lindokuhle Xaki 215041720
+        Auditor class
+        date 1 June 2021
+
 */
 
+@SuppressWarnings("ALL")
 
 public class Auditor {
+    @SuppressWarnings("CanBeFinal")
 
     private String auditorID;
     private String auditorFirstName;
@@ -15,13 +17,13 @@ public class Auditor {
     private String cellphone;
 
 
+
     private Auditor(Builder builder) {
         this.auditorID = builder.auditorID;
-        this.auditorFirstName = builder.auditorFirstName;
-        this.auditorSurname = builder.auditorSurname;
+        this.auditorFirstName = builder.auditorFirstName;;
+        this.auditorSurname = builder.auditorSurname;;
         this.cellphone = builder.cellphone;
     }
-
     public String getAuditorID() {
         return auditorID;
     }
@@ -37,7 +39,6 @@ public class Auditor {
     public String getCellphone() {
         return cellphone;
     }
-
 
     @Override
     public String toString() {
@@ -58,22 +59,19 @@ public class Auditor {
         private String cellphone;
 
 
-        public Builder setAuditorID(String auditorID) {
-            this.auditorID = auditorID;
+        public Builder auditorID(String auditorFirstName){
+            this.auditorID = auditorFirstName;
             return this;
         }
-
-        public Builder setAuditorFirstName(String auditorFirstName) {
+        public Builder auditorFirstName(String auditorFirstName){
             this.auditorFirstName = auditorFirstName;
             return this;
         }
-
-        public Builder setAuditorSurname(String auditorSurname) {
+        public Builder auditorSurname(String auditorSurname){
             this.auditorSurname = auditorSurname;
             return this;
         }
-
-        public Builder setCellphone(String cellphone) {
+        public Builder cellphone(String cellphone){
             this.cellphone = cellphone;
             return this;
         }
@@ -93,5 +91,11 @@ public class Auditor {
         }
 
 
-    }
-}
+
+
+
+
+
+    }}
+
+
