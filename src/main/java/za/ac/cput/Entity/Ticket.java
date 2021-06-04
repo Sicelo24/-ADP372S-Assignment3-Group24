@@ -5,21 +5,44 @@
  */
 package za.ac.cput.Entity;
 
+
 public class Ticket {
     private String ticketId;
     private String ticketDescription;
     private String ticketDate;
     private String ticketIssue;
 
-    public Ticket(Builder builder) {
+    private Ticket(Builder builder) {
         this.ticketId = builder.ticketId;
         this.ticketDescription = builder.ticketDescription;
         this.ticketDate = builder.ticketDate;
         this.ticketIssue = builder.ticketIssue;
     }
 
-    public Ticket() {
+    public String getTicketId() {
+        return ticketId;
+    }
 
+    public String getTicketDescription() {
+        return ticketDescription;
+    }
+
+    public String getTicketDate() {
+        return ticketDate;
+    }
+
+    public String getTicketIssue() {
+        return ticketIssue;
+    }
+
+    @Override
+    public String toString() {
+        return "Builder{" +
+                "ticketId='" + ticketId + '\'' +
+                ", ticketDescription='" + ticketDescription + '\'' +
+                ", ticketDate='" + ticketDate + '\'' +
+                ", ticketIssue='" + ticketIssue + '\'' +
+                '}';
     }
 
     public static class Builder {
@@ -46,7 +69,11 @@ public class Ticket {
             return this;
         }
 
-        public Builder Copy(Ticket ticket) {
+        public Ticket build() {
+            return new Ticket(this);
+        }
+
+        private Builder copy(Ticket ticket) {
             this.ticketId = ticket.ticketId;
             this.ticketDescription = ticket.ticketDescription;
             this.ticketIssue = ticket.ticketIssue;
@@ -54,34 +81,5 @@ public class Ticket {
             return this;
         }
 
-        public Ticket Build(Builder build) {
-            return new Ticket(this);
-        }
     }
-        public String getTicketId() {
-            return ticketId;
-        }
-
-        public String getTicketDescription() {
-            return ticketDescription;
-        }
-
-        public String getTicketDate() {
-            return ticketDate;
-        }
-
-        public String getTicketIssue() {
-            return ticketIssue;
-        }
-
-        @Override
-        public String toString() {
-            return "Builder{" +
-                    "ticketId='" + ticketId + '\'' +
-                    ", ticketDescription='" + ticketDescription + '\'' +
-                    ", ticketDate='" + ticketDate + '\'' +
-                    ", ticketIssue='" + ticketIssue + '\'' +
-                    '}';
-        }
-
 }
