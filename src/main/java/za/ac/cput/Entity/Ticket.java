@@ -11,11 +11,15 @@ public class Ticket {
     private String ticketDate;
     private String ticketIssue;
 
-    private Ticket(Builder builder) {
+    public Ticket(Builder builder) {
         this.ticketId = builder.ticketId;
         this.ticketDescription = builder.ticketDescription;
         this.ticketDate = builder.ticketDate;
         this.ticketIssue = builder.ticketIssue;
+    }
+
+    public Ticket() {
+
     }
 
     public static class Builder {
@@ -50,10 +54,10 @@ public class Ticket {
             return this;
         }
 
-        public Ticket Build() {
+        public Ticket Build(Builder build) {
             return new Ticket(this);
         }
-
+    }
         public String getTicketId() {
             return ticketId;
         }
@@ -79,5 +83,5 @@ public class Ticket {
                     ", ticketIssue='" + ticketIssue + '\'' +
                     '}';
         }
-    }
+
 }
