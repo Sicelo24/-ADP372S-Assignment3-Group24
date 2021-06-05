@@ -1,4 +1,4 @@
-package za.ac.cput.Factory;
+package za.ac.cput.factory;
 /*
         @Author : Tashreeq Williams
         -> UserAccountFactory
@@ -6,8 +6,7 @@ package za.ac.cput.Factory;
 
 */
 
-import za.ac.cput.Entity.UserAccount;
-import za.ac.cput.Factory.UserAccountFactory;
+import za.ac.cput.entity.UserAccount;
 
 
 public class UserAccountFactory {
