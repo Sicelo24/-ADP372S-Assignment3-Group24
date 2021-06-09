@@ -28,7 +28,7 @@ class AuditorFactoryTest {
                 ,"Xaki"
                 ,"06555111285");
     }
-
+    //Test
     @Test
     void buildAuditor() {
         assertNotNull(auditor);
