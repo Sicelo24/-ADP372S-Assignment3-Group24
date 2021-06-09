@@ -19,6 +19,7 @@ public class Report {
     }
 
     public String getReportId() {
+
         return reportId;
     }
 
@@ -27,10 +28,11 @@ public class Report {
     }
 
     public String getReportDate() {
+
         return reportDate;
     }
 
-    public java.lang.String toString() {
+    public String toString() {
         return "Report{" +
                 "reportId=" + reportId +
                 ", reportAuth=" + reportAuth +
