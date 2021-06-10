@@ -3,7 +3,7 @@
  Author: Avuyile Xozumthi (218331827)
  Date: 10 june 2021
 */
-package za.ac.cput.Factory;
+package za.ac.cput.factory;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

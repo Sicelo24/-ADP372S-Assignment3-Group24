@@ -1,4 +1,4 @@
-package za.ac.cput.Factory;
+package za.ac.cput.factory;
 
         /*@Author : Tashreeq Williams (217290671)
         UserAccount TDD

@@ -3,7 +3,7 @@
  * Author: Sicelo Zitha (216140943)
  * Date: 4 June 2021
  */
-package za.ac.cput.Factory;
+package za.ac.cput.factory;
 
 import za.ac.cput.entity.Ticket;
 

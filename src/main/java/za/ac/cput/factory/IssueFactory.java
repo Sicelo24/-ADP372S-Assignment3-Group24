@@ -4,7 +4,7 @@
  * Date: 1 June 2021
  */
 
-package za.ac.cput.Factory;
+package za.ac.cput.factory;
 
 public class IssueFactory {
     //DO NOT TOUCH

@@ -1,4 +1,4 @@
-package za.ac.cput.Factory;
+package za.ac.cput.factory;
 
 /*
         @Author : Lindokuhle Xaki 215041720
