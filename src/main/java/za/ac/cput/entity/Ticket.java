@@ -3,7 +3,7 @@
  * Author: Sicelo Zitha (216140943)
  * Date: 1 June 2021
  */
-package za.ac.cput.Entity;
+package za.ac.cput.entity;
 
 
 public class Ticket {

@@ -5,7 +5,7 @@
 */
 package za.ac.cput.Factory;
 
-import za.ac.cput.Entity.UniversityStaff;
+import za.ac.cput.entity.UniversityStaff;
 
 public class UniversityStaffFactory {
     public static UniversityStaff buildUniversityStaff(String staffID,

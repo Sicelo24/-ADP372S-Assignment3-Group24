@@ -6,8 +6,7 @@ package za.ac.cput.Factory;
 
 */
 
-import za.ac.cput.Entity.UserAccount;
-import za.ac.cput.Factory.UserAccountFactory;
+import za.ac.cput.entity.UserAccount;
 
 
 public class UserAccountFactory {

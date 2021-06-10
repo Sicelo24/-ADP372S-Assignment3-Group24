@@ -6,7 +6,7 @@ package za.ac.cput.Factory;
  Date: 04 June 2021
 */
 
-import za.ac.cput.Entity.Report;
+import za.ac.cput.entity.Report;
 
 public class ReportFactory {
 

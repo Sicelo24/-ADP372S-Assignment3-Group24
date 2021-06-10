@@ -4,7 +4,7 @@
  * Date: 1 June 2021
  */
 
-package za.ac.cput.Entity;
+package za.ac.cput.entity;
 
 public class Issue {
     private String issueId, issueDescription, issueArea, issueRaisedDate, issueResolvedDate;

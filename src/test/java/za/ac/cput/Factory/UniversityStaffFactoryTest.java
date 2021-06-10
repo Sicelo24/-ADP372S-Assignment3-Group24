@@ -1,9 +1,13 @@
+/* Assignment 3.java
+ Entity for the UniversityStaff
+ Author: Avuyile Xozumthi (218331827)
+ Date: 10 june 2021
+*/
 package za.ac.cput.Factory;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import za.ac.cput.Entity.UniversityStaff;
-import za.ac.cput.Entity.UserAccount;
+import za.ac.cput.entity.UniversityStaff;
 
 import static org.junit.jupiter.api.Assertions.*;
 

@@ -7,8 +7,7 @@ package za.ac.cput.Factory;
 
 */
 
-import za.ac.cput.Entity.Auditor;
-import za.ac.cput.Factory.AuditorFactory;
+import za.ac.cput.entity.Auditor;
 
 
 public class AuditorFactory {

@@ -5,8 +5,7 @@
  */
 package za.ac.cput.Factory;
 
-import za.ac.cput.Entity.Ticket;
-import za.ac.cput.Factory.TicketFactory;
+import za.ac.cput.entity.Ticket;
 
 public class TicketFactory {
     public static Ticket buildTicket(String ticketId,
