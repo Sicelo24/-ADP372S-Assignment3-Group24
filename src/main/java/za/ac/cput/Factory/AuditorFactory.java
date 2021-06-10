@@ -14,7 +14,7 @@ import za.ac.cput.Factory.AuditorFactory;
 public class AuditorFactory {
 
 
-    public static Auditor buildAuditor(String auditorID,
+    public static Auditor buildAuditor(String id, String auditorID,
                                        String auditorFirstName,
                                        String auditorSurname,
                                        String cellphone)
