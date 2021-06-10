@@ -1,4 +1,4 @@
-package za.ac.cput.Entity;
+package za.ac.cput.entity;
 
 /* UserAccount.java Class
  * Entity for UserAccount

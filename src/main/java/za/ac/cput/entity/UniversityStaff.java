@@ -3,7 +3,7 @@
  Author: Avuyile Xozumthi (218331827)
  Date: 01 june 2021
 */
-package za.ac.cput.Entity;
+package za.ac.cput.entity;
 
 public class UniversityStaff {
    private String staffID, staffFirstName, staffSurname,cellphone;

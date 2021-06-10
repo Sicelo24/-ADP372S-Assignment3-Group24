@@ -3,10 +3,9 @@
  * Author: Sicelo Zitha (216140943)
  * Date: 4 June 2021
  */
-package za.ac.cput.Factory;
+package za.ac.cput.factory;
 
-import za.ac.cput.Entity.Ticket;
-import za.ac.cput.Factory.TicketFactory;
+import za.ac.cput.entity.Ticket;
 
 public class TicketFactory {
     public static Ticket buildTicket(String ticketId,
