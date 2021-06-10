@@ -1,4 +1,4 @@
-package za.ac.cput.factory;
+package za.ac.cput.Factory;
 
 /*
         @Author : Lindokuhle Xaki 215041720
@@ -9,6 +9,8 @@ package za.ac.cput.factory;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import za.ac.cput.entity.Auditor;
+import za.ac.cput.factory.AuditorFactory;
+
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 

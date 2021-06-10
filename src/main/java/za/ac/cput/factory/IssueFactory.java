@@ -1,20 +1,11 @@
 /* IssueFactory.java Class
- * Entity for Encapsulating Issue class Inner Workings
+ * Entity for Hiding Issue Implementation
  * Author: Athenkosi Zono (218030185)
- * Date: 4 June 2021
+ * Date: 1 June 2021
  */
 
-package za.ac.cput.factory;
-import za.ac.cput.entity.Issue;
-import za.ac.cput.util.KeyGenerator;
+package za.ac.cput.Factory;
 
 public class IssueFactory {
-    public static Issue createIssue(String issueDescription, String issueArea, String issueRaisedDate,
-                                    String issueResolvedDate, boolean issueStatus, boolean isResolved,
-                                    boolean isValidated){
-        String issueId = KeyGenerator.genratedId();
-        return new Issue.Builder().issueId(issueId).issueDescription(issueDescription).issueArea(issueArea)
-                .issueRaisedDate(issueRaisedDate).issueResolvedDate(issueResolvedDate).issueStatus(issueStatus)
-                .isResolved(isResolved).isValidated(isValidated).Build();
-    }
+    //DO NOT TOUCH
 }

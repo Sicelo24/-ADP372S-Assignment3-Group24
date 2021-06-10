@@ -9,7 +9,8 @@ package za.ac.cput.Factory;
 import org.junit.Assert;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import za.ac.cput.Entity.Report;
+import za.ac.cput.entity.Report;
+import za.ac.cput.factory.ReportFactory;
 
 import static org.junit.jupiter.api.Assertions.*;
 

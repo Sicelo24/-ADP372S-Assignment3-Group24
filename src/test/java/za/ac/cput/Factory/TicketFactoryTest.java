@@ -8,7 +8,8 @@ package za.ac.cput.Factory;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import za.ac.cput.Entity.Ticket;
+import za.ac.cput.entity.Ticket;
+import za.ac.cput.factory.TicketFactory;
 
 
 import static org.junit.jupiter.api.Assertions.*;
