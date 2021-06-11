@@ -47,7 +47,7 @@ class TicketFactoryTest {
         System.out.println("Objects are Identical");
     }
 
-    @Timeout(11000)
+    @Timeout(16000)
     @Test
     void testTimeout() throws InterruptedException {
         Thread.sleep(10000);
