@@ -4,12 +4,11 @@
         date 6 June 2021
 
 */
-package za.ac.cput.Factory;
+package za.ac.cput.factory;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import za.ac.cput.entity.Ticket;
-import za.ac.cput.factory.TicketFactory;
 
 
 import static org.junit.jupiter.api.Assertions.*;

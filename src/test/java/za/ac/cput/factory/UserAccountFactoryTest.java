@@ -1,4 +1,4 @@
-package za.ac.cput.Factory;
+package za.ac.cput.factory;
 
         /*@Author : Tashreeq Williams (217290671)
         UserAccount TDD
@@ -9,7 +9,6 @@ package za.ac.cput.Factory;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import za.ac.cput.entity.UserAccount;
-import za.ac.cput.factory.UserAccountFactory;
 
 import static org.junit.jupiter.api.Assertions.*;
 

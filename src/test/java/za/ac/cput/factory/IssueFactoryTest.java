@@ -1,4 +1,4 @@
-package za.ac.cput.Factory;
+package za.ac.cput.factory;
 
 /* IssueFactoryTest.java Class
  * Entity for Testing creation of issue through IssueFactory
@@ -9,7 +9,6 @@ package za.ac.cput.Factory;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import za.ac.cput.entity.Issue;
-import za.ac.cput.factory.IssueFactory;
 
 import static org.junit.jupiter.api.Assertions.*;
 
