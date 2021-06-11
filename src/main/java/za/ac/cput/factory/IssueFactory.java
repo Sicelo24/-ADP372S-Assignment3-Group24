@@ -20,5 +20,9 @@ public class IssueFactory {
                 .isResolved(isResolved).isValidated(isValidated).Build();
     }
 
+    public static Issue copyFromIssue(Issue issue){
+        return new Issue.Builder().Copy(issue);
+    }
+
 
 }
