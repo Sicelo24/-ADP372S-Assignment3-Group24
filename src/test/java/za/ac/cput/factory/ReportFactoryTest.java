@@ -1,4 +1,4 @@
-package za.ac.cput.Factory;
+package za.ac.cput.factory;
 
 /*
  Entity for ReportFactoryTest
@@ -6,11 +6,9 @@ package za.ac.cput.Factory;
  Date: 09 June 2021
 */
 
-import org.junit.Assert;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import za.ac.cput.entity.Report;
-import za.ac.cput.factory.ReportFactory;
 
 import static org.junit.jupiter.api.Assertions.*;
 

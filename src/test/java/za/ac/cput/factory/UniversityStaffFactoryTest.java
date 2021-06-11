@@ -1,11 +1,9 @@
-package za.ac.cput.Factory;
+package za.ac.cput.factory;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Timeout;
 import za.ac.cput.entity.UniversityStaff;
-import za.ac.cput.factory.UniversityStaffFactory;
 
 import static org.junit.jupiter.api.Assertions.*;
 
