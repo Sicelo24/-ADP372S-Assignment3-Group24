@@ -65,7 +65,7 @@ public class Issue {
             return this;
         }
 
-        public Builder Copy(Issue issue){
+        public Issue Copy(Issue issue){
             this.issueId = issue.issueId;
             this.issueDescription = issue.issueDescription;
             this.issueArea = issue.issueArea;
@@ -74,7 +74,7 @@ public class Issue {
             this.issueStatus = issue.issueStatus;
             this.isResolved = issue.isResolved;
             this.isValidated = issue.isValidated;
-            return this;
+            return new Issue(this);
         }
 
         public Issue Build(){
