@@ -1,4 +1,4 @@
-package za.ac.cput.factory;
+package za.ac.cput.Factory;
 
 /*
  Entity for ReportFactoryTest
@@ -7,27 +7,58 @@ package za.ac.cput.factory;
 */
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import za.ac.cput.entity.Report;
+import za.ac.cput.factory.ReportFactory;
+
+import java.time.Duration;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 public class ReportFactoryTest {
 
-    Report r;
+    Report r1;
+    Report r2;
 
     @BeforeEach
 
     public void setUp() throws Exception {
-        r = ReportFactory.createReport(
+        r1 = ReportFactory.createReport(
                 "215126505"
                 ,"Mlungisi Xakekile"
+                ,"09 June 2021");
+
+        r2 = ReportFactory.createReport(
+                "215100002"
+                ,"President"
                 ,"09 June 2021");
     }
     @Test
     void buildReport() {
-        assertNotNull(r);
-        System.out.println(r);
+        assertNotNull(r1);
+        System.out.println(r2);
+    }
+
+    @Test
+    void objectEquality() {
+        assertEquals(r1.getReportDate(), r2.getReportDate());
+    }
+
+    @Test
+    void objectIdentity(){
+        assertSame(r1.getReportDate(), r2.getReportDate());
+    }
+
+    @Test
+    void timeouts() throws Exception {
+        Thread.sleep(1000);
+        assertNotNull(r1);
+    }
+
+    @Disabled("Disable the test")
+    @Test void disablingTests(){
+        assertNotNull(r2);
     }
 
 }
