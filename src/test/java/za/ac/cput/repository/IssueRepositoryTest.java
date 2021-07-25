@@ -7,16 +7,14 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class IssueRepositoryTest {
 
+    IssueRepository issueRepository;
     @BeforeEach void setup(){
-
-    }
-
-    @Test
-    void getAll() {
+        issueRepository = IssueRepository.createIssueRepository();
     }
 
     @Test
     void create() {
+        // Under Construction
     }
 
     @Test
@@ -29,5 +27,11 @@ class IssueRepositoryTest {
 
     @Test
     void delete() {
+    }
+
+    @Test
+    void getAll() {
+        assertNotNull(issueRepository.getAll());
+        System.out.println(issueRepository.getAll());
     }
 }
