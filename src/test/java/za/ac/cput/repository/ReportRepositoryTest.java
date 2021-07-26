@@ -9,9 +9,7 @@ package za.ac.cput.repository;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.jupiter.api.Test;
-import za.ac.cput.entity.Auditor;
 import za.ac.cput.entity.Report;
-import za.ac.cput.factory.AuditorFactory;
 import za.ac.cput.factory.ReportFactory;
 
 import static org.junit.jupiter.api.Assertions.*;
