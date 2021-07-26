@@ -40,6 +40,7 @@ public class Report {
                 '}';
     }
 
+
     public static class Builder {
         private String reportId, reportAuth, reportDate;
 
