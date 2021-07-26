@@ -6,6 +6,7 @@ package za.ac.cput.repository;
  Date: 26 July 2021
 */
 
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.jupiter.api.Test;
 import za.ac.cput.entity.Auditor;
@@ -32,28 +33,28 @@ public class ReportRepositoryTest {
         System.out.println("\nCreated: " + report);
     }
 
-  /*  @Test
+    @Test
     public void read() {
-        Report read = reportRepository.read(report.getReportId());
+        Report read = reportRepository.create(report);
         assertNotNull(read);
         System.out.println("\nTo String:\n" + read.toString());
     }
 
     @Test
     public void update() {
-        Report report1 = new Report.Builder().copy(report).setReportId(215126505).
-                setTrainerID(212121212).setReportDate
-                ("2021/08/26").setAttendance
-                ("Monthly").build();
-        report1 = reportRepository.update(report1);
-        System.out.println("\nUpdated: " + report1);
+        Report r = new Report.Builder().copy(report).setReportId("215126505")
+                .setReportAuth("Mr Xakekile")
+                .setReportDate("26 July 2021")
+                .build();
+        Assert.assertEquals(report.getReportId(), r.getReportId());
+        System.out.println("Update: " + r);
     }
 
     @Test
     public void delete() {
-        boolean deleteSuccessful = reportRepository.delete(report.getReportId());
+        boolean deleteSuccessful = reportRepository.getAll().remove(report.getReportId());
         assertTrue(deleteSuccessful);
-    }*/
+    }
 
     @Test
     public void getAll() {

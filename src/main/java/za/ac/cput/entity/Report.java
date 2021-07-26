@@ -19,11 +19,11 @@ public class Report {
     }
 
     public String getReportId() {
-
         return reportId;
     }
 
     public String getReportAuth() {
+
         return reportAuth;
     }
 

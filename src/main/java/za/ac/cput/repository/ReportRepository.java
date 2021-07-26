@@ -39,19 +39,15 @@ public class ReportRepository implements IReportRepository {
         return null;
     }
 
+
     @Override
     public Report update(Report report) {
-        return null;
-    }
-/*
-    @Override
-    public Report update(Report report) {
-        Report report1 = read(report.getReportId());
-        if (report1 != null)
-            this.reportSet.remove(report1);
+        Report r = create(report);
+        if (r != null)
+            this.reportSet.remove(r);
         this.reportSet.add(report);
         return report;
-    }*/
+    }
 
 
     @Override
