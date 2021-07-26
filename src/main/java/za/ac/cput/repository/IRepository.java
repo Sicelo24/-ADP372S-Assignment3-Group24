@@ -1,22 +1,11 @@
 package za.ac.cput.repository;
 
-public class IRepository {
+public interface IRepository<T, ID> {
 
-    public  void create(){
-
-    }
-
-    public void read(){
-
-    }
-
-    public void update(){
-
-    }
-    public void delete(){
-
-
-    }
+   public T create(T t);
+   public T read(ID id);
+   public T update(T t);
+   public boolean delete(ID id);
 
 }
 
