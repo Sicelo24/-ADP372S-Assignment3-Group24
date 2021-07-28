@@ -1,7 +1,12 @@
+/* IssueRepository.java Class
+ * Entity for Issue Repository
+ * Author: Athenkosi Zono (218030185)
+ * Date: 28 July 2021
+ */
+
 package za.ac.cput.repository;
 
 import za.ac.cput.entity.Issue;
-
 import java.util.HashSet;
 import java.util.Set;
 
