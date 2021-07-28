@@ -2,7 +2,7 @@
  * Author: Sicelo Zitha (216140943)
  * Date: 26 July 2021
  */
-package za.ac.cput.repository;
+package za.ac.cput.repository.impl;
 
 import za.ac.cput.entity.Ticket;
 import java.util.*;
