@@ -1,9 +1,14 @@
+/* IssueRepositoryTest.java Class
+ * Entity for Issue Repository Test
+ * Author: Athenkosi Zono (218030185)
+ * Date: 28 July 2021
+ */
+
 package za.ac.cput.repository;
 
 import org.junit.jupiter.api.*;
 import za.ac.cput.entity.Issue;
 import za.ac.cput.factory.IssueFactory;
-import za.ac.cput.repository.IssueRepository;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -33,6 +38,8 @@ class IssueRepositoryTest {
 
     @Test
     void c_update() {
+        Issue updatedIssue = IssueFactory.copyFromIssue(issue_2).setIssueDescription("Not Qualified Staff");
+        assertNotNull(issueRepository.update(updatedIssue));
     }
 
     @Test
