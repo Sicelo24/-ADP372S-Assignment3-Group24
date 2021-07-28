@@ -9,7 +9,6 @@ package za.ac.cput.repository.impl;
 import org.junit.jupiter.api.*;
 import za.ac.cput.entity.Issue;
 import za.ac.cput.factory.IssueFactory;
-import za.ac.cput.repository.impl.IssueRepository;
 
 import static org.junit.jupiter.api.Assertions.*;
 
