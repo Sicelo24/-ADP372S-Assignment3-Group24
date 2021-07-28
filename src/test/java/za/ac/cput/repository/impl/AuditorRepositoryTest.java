@@ -1,9 +1,9 @@
-package za.ac.cput.repository;
+package za.ac.cput.repository.impl;
 
 import org.junit.Assert;
 import za.ac.cput.entity.Auditor;
 import za.ac.cput.factory.AuditorFactory;
-import za.ac.cput.repository.IAuditorRepository;
+import za.ac.cput.repository.impl.AuditorRepository;
 import org.junit.Before;
 import org.junit.Test;
 

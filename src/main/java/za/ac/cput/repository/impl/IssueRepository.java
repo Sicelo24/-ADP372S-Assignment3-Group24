@@ -1,11 +1,17 @@
-package za.ac.cput.repository;
+/* IssueRepository.java Class
+ * Entity for Issue Repository
+ * Author: Athenkosi Zono (218030185)
+ * Date: 28 July 2021
+ */
+
+package za.ac.cput.repository.impl;
 
 import za.ac.cput.entity.Issue;
-
 import java.util.HashSet;
 import java.util.Set;
 
-public class IssueRepository implements IIssueRepository{
+public class IssueRepository implements IIssueRepository {
+
     private static IssueRepository issueRepository = null;
     private Set<Issue> issueDB;
 
@@ -39,15 +45,21 @@ public class IssueRepository implements IIssueRepository{
     @Override
     public Issue update(Issue issue) {
         for(Issue i: issueDB)
-            if(issue.getIssueId() == issue.getIssueId()) ;// Under construction
+            if(i.getIssueId() == issue.getIssueId()) {
+                issueDB.remove(i);
+                issueDB.add(issue);
+                return issue;
+            }
         return null;
     }
 
     @Override
     public boolean delete(String s) {
-        boolean success = false;
         for(Issue issue: issueDB)
-            if(issue.getIssueId() == s) success = issueDB.remove(issue);
-        return success;
+            if(issue.getIssueId() == s) {
+                issueDB.remove(issue);
+                return true;
+            }
+        return false;
     }
 }
