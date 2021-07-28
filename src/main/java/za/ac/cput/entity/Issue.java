@@ -115,6 +115,11 @@ public class Issue {
         return isValidated;
     }
 
+    public Issue setIssueDescription(String description){
+        this.issueDescription = description;
+        return this;
+    }
+
     @Override
     public String toString() {
         return "Issue{" +
