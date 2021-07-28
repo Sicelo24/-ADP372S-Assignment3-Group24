@@ -76,11 +76,33 @@ public class Auditor {
             return this;
         }
 
-        public Auditor Build() {
+        public Builder setAuditorID(String auditorID) {
+            this.auditorID = auditorID;
+            return this;
+        }
+
+        public Builder setAuditorFirstName(String auditorFirstName) {
+            this.auditorFirstName = auditorFirstName;
+            return this;
+        }
+
+        public Builder setAuditorSurname(String auditorSurname) {
+            this.auditorSurname = auditorSurname;
+            return this;
+        }
+
+        public Builder setCellphone(String cellphone) {
+            this.cellphone = cellphone;
+            return this;
+        }
+
+
+
+        public Auditor Build()  {
             return new Auditor(this);
         }
 
-        private Builder copy(Auditor auditor) {
+        public Builder copy(Auditor auditor) {
             this.auditorID = auditor.auditorID;
             this.auditorFirstName = auditor.auditorFirstName;
             this.auditorSurname = auditor.auditorSurname;
@@ -89,10 +111,6 @@ public class Auditor {
             return this;
 
         }
-
-
-
-
 
 
 
