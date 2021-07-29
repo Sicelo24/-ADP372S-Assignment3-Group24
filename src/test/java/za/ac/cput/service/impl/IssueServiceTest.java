@@ -48,7 +48,7 @@ class IssueServiceTest {
         Issue updatedIssue = IssueFactory.copyFromIssue(issue).setIssueDescription("No Elevator at all");
         service.update(updatedIssue);
         assertEquals("No Elevator at all", service.read(issue.getIssueId()).getIssueDescription());
-        System.out.println("Updated Issue Description.\n"+issue);
+        System.out.println("Updated Issue Description.\n"+service.read(issue.getIssueId()));
     }
 
     @Test
