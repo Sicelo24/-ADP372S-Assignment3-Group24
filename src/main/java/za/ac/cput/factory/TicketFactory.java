@@ -20,4 +20,8 @@ public class TicketFactory {
                 .ticketIssue(ticketIssue)
                 .build();
     }
+    public static Ticket.Builder copyFromTicket(Ticket ticket){
+        return new Ticket.Builder().copy(ticket);
+    }
+
 }
