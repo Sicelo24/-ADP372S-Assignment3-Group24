@@ -9,7 +9,7 @@ package za.ac.cput.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import za.ac.cput.entity.Issue;
-import za.ac.cput.service.impl.IssueService;
+import za.ac.cput.service.entity.IssueService;
 import java.util.Set;
 
 @RestController
