@@ -1,19 +1,17 @@
 package za.ac.cput.repository.impl;
 
-import org.junit.Assert;
+import org.junit.jupiter.api.*;
 import za.ac.cput.entity.Auditor;
 import za.ac.cput.factory.AuditorFactory;
 import za.ac.cput.repository.impl.AuditorRepository;
-import org.junit.Before;
-import org.junit.Test;
 
-import static org.junit.Assert.*;
 
+import static org.junit.jupiter.api.Assertions.*;
 public class AuditorRepositoryTest {
     AuditorRepository repository;
     Auditor auditor;
 
-    @Before
+    @BeforeEach
     public void setUp() throws Exception {
         repository = AuditorRepository.getRepository();
         auditor = AuditorFactory.buildAuditor("215041720"
@@ -54,7 +52,7 @@ public class AuditorRepositoryTest {
     public void update() {
     Auditor revise = new Auditor.Builder().copy(auditor).setAuditorFirstName("Melo").setAuditorSurname("Dyidi").Build();
     revise = repository.update(revise);
-    Assert.assertEquals(auditor.getAuditorID(), revise.getAuditorID());
+    assertEquals(auditor.getAuditorID(), revise.getAuditorID());
     System.out.println("Update: " + revise);
 }
 
