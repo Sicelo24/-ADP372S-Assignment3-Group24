@@ -11,6 +11,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import za.ac.cput.entity.Issue;
 import za.ac.cput.factory.IssueFactory;
+import za.ac.cput.service.entity.IssueService;
 
 import static org.junit.jupiter.api.Assertions.*;
 

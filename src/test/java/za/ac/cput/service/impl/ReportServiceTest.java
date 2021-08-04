@@ -11,6 +11,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import za.ac.cput.entity.Report;
 import za.ac.cput.factory.ReportFactory;
+import za.ac.cput.service.entity.ReportService;
 
 import java.util.Set;
 
