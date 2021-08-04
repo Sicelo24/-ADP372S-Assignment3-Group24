@@ -36,8 +36,8 @@ public class IssueController {
         String status = service.delete(id) ? "Successfully deleted." : "Could Not Perform delete successfully!";
         return status;
     }
-    
+
     @GetMapping("/getall")
-    public Set<Issue> getAll(){ return service.getAll(); }
+    public Set<Issue> getAll() { return service.getAll(); }
 
 }
