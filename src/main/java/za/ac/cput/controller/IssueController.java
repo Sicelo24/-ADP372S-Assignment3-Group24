@@ -24,7 +24,7 @@ public class IssueController {
     }
 
     @PostMapping("/create")
-    public Issue createIssue(@RequestBody Issue issue) {
+    public Issue create(@RequestBody Issue issue) {
         return service.create(issue);
     }
 
@@ -33,7 +33,7 @@ public class IssueController {
         return service.read(id);
     }
 
-    @GetMapping("/update")
+    @PostMapping("/update")
     public Issue update(@RequestBody Issue issue) {
         return service.update(issue);
     }
