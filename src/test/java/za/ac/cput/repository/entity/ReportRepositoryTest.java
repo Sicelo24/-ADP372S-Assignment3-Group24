@@ -1,4 +1,4 @@
-package za.ac.cput.repository.impl;
+package za.ac.cput.repository.entity;
 
 /*
  Factory for Report
@@ -10,8 +10,8 @@ import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 import za.ac.cput.entity.Report;
 import za.ac.cput.factory.ReportFactory;
+import za.ac.cput.repository.entity.ReportRepository;
 import za.ac.cput.repository.impl.IReportRepository;
-import za.ac.cput.repository.impl.ReportRepository;
 
 import static org.junit.jupiter.api.Assertions.*;
 

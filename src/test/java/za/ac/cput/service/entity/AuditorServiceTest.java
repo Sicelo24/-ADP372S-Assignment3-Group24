@@ -1,10 +1,11 @@
-package za.ac.cput.service.impl;
+package za.ac.cput.service.entity;
 
 import org.junit.FixMethodOrder;
 import org.junit.jupiter.api.Test;
 import org.junit.runners.MethodSorters;
 import za.ac.cput.entity.Auditor;
 import za.ac.cput.factory.AuditorFactory;
+import za.ac.cput.service.entity.AuditorService;
 
 
 import java.util.Set;

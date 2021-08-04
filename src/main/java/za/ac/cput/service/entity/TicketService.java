@@ -1,10 +1,12 @@
-package za.ac.cput.service.impl;
+package za.ac.cput.service.entity;
 
 import za.ac.cput.entity.Ticket;
-import za.ac.cput.repository.impl.TicketRepository;
+import za.ac.cput.repository.entity.TicketRepository;
+import za.ac.cput.service.impl.ITicketService;
+
 import java.util.Set;
 
-public class TicketService implements ITicketService{
+public class TicketService implements ITicketService {
 
     private static TicketService ticketService = null;
     private static TicketRepository repository = null;

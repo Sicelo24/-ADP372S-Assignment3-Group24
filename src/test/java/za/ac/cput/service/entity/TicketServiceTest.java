@@ -1,14 +1,11 @@
-package za.ac.cput.service.impl;
+package za.ac.cput.service.entity;
 
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
-import za.ac.cput.entity.Auditor;
-import za.ac.cput.entity.Issue;
 import za.ac.cput.entity.Ticket;
-import za.ac.cput.factory.AuditorFactory;
-import za.ac.cput.factory.IssueFactory;
 import za.ac.cput.factory.TicketFactory;
+import za.ac.cput.service.entity.TicketService;
 
 import java.util.Set;
 

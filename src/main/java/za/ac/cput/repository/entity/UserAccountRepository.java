@@ -1,10 +1,12 @@
-package za.ac.cput.repository.impl;
+package za.ac.cput.repository.entity;
 /*
  User Account Rep
  Author: Tashreeq Williams (217290671)
  Date: 26 July 2021
 */
 import za.ac.cput.entity.UserAccount;
+import za.ac.cput.repository.impl.IUserAccountRepository;
+
 import java.util.*;
 import java.util.Set;
 

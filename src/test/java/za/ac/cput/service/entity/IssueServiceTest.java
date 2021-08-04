@@ -4,13 +4,14 @@
  * Date: 28 July 2021
  */
 
-package za.ac.cput.service.impl;
+package za.ac.cput.service.entity;
 
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import za.ac.cput.entity.Issue;
 import za.ac.cput.factory.IssueFactory;
+import za.ac.cput.service.entity.IssueService;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -48,7 +49,7 @@ class IssueServiceTest {
         Issue updatedIssue = IssueFactory.copyFromIssue(issue).setIssueDescription("No Elevator at all");
         service.update(updatedIssue);
         assertEquals("No Elevator at all", service.read(issue.getIssueId()).getIssueDescription());
-        System.out.println("Updated Issue Description.\n"+issue);
+        System.out.println("Updated Issue Description.\n"+service.read(issue.getIssueId()));
     }
 
     @Test
