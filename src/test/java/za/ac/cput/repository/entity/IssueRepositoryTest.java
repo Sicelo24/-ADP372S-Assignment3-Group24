@@ -4,11 +4,12 @@
  * Date: 28 July 2021
  */
 
-package za.ac.cput.repository.impl;
+package za.ac.cput.repository.entity;
 
 import org.junit.jupiter.api.*;
 import za.ac.cput.entity.Issue;
 import za.ac.cput.factory.IssueFactory;
+import za.ac.cput.repository.entity.IssueRepository;
 
 import static org.junit.jupiter.api.Assertions.*;
 

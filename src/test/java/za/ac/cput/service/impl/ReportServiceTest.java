@@ -6,13 +6,11 @@ package za.ac.cput.service.impl;
  Date:  02 August 2021
 */
 
-import org.junit.Assert;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import za.ac.cput.entity.Report;
 import za.ac.cput.factory.ReportFactory;
-import za.ac.cput.repository.impl.ReportRepository;
 
 import java.util.Set;
 

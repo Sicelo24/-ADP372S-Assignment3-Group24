@@ -7,7 +7,7 @@
 package za.ac.cput.service.impl;
 
 import za.ac.cput.entity.Issue;
-import za.ac.cput.repository.impl.IssueRepository;
+import za.ac.cput.repository.entity.IssueRepository;
 
 import java.util.Set;
 

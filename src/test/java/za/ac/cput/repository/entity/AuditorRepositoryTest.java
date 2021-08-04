@@ -1,9 +1,9 @@
-package za.ac.cput.repository.impl;
+package za.ac.cput.repository.entity;
 
 import org.junit.jupiter.api.*;
 import za.ac.cput.entity.Auditor;
 import za.ac.cput.factory.AuditorFactory;
-import za.ac.cput.repository.impl.AuditorRepository;
+import za.ac.cput.repository.entity.AuditorRepository;
 
 
 import static org.junit.jupiter.api.Assertions.*;

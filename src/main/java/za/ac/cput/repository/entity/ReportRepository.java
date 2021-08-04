@@ -1,4 +1,4 @@
-package za.ac.cput.repository.impl;
+package za.ac.cput.repository.entity;
 
 /*
  Factory for Report
@@ -7,6 +7,8 @@ package za.ac.cput.repository.impl;
 */
 
 import za.ac.cput.entity.Report;
+import za.ac.cput.repository.impl.IReportRepository;
+
 import java.util.HashSet;
 import java.util.Set;
 

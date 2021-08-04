@@ -4,9 +4,11 @@
  * Date: 28 July 2021
  */
 
-package za.ac.cput.repository.impl;
+package za.ac.cput.repository.entity;
 
 import za.ac.cput.entity.Issue;
+import za.ac.cput.repository.impl.IIssueRepository;
+
 import java.util.HashSet;
 import java.util.Set;
 

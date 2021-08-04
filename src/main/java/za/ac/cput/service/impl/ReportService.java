@@ -7,11 +7,9 @@ package za.ac.cput.service.impl;
 */
 
 import za.ac.cput.entity.Report;
-import za.ac.cput.repository.impl.IssueRepository;
-import za.ac.cput.repository.impl.ReportRepository;
-import java.util.Scanner;
+import za.ac.cput.repository.entity.ReportRepository;
+
 import java.util.Set;
-import java.util.stream.Collectors;
 
 
 public class ReportService implements IReportService{

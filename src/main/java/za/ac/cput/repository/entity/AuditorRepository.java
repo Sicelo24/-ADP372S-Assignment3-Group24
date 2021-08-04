@@ -1,6 +1,8 @@
-package za.ac.cput.repository.impl;
+package za.ac.cput.repository.entity;
 
 import za.ac.cput.entity.Auditor;
+import za.ac.cput.repository.impl.IAuditorRepository;
+
 import java.util.*;
 import java.util.Set;
 

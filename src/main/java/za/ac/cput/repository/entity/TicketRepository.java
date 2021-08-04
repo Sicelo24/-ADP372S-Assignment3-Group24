@@ -2,12 +2,14 @@
  * Author: Sicelo Zitha (216140943)
  * Date: 26 July 2021
  */
-package za.ac.cput.repository.impl;
+package za.ac.cput.repository.entity;
 
 import za.ac.cput.entity.Ticket;
+import za.ac.cput.repository.impl.ITicketRepository;
+
 import java.util.*;
 
-public class TicketRepository implements ITicketRepository{
+public class TicketRepository implements ITicketRepository {
     private static TicketRepository repository = null;
     private Map<String, Ticket> tickets;
 
