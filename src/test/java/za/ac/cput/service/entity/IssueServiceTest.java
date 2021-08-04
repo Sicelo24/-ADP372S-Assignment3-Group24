@@ -4,7 +4,7 @@
  * Date: 28 July 2021
  */
 
-package za.ac.cput.service.impl;
+package za.ac.cput.service.entity;
 
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;

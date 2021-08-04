@@ -1,4 +1,4 @@
-package za.ac.cput.service.impl;
+package za.ac.cput.service.entity;
 
 /*
  Service for Report
