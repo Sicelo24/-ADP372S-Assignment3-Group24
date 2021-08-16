@@ -73,7 +73,7 @@ public class Ticket {
             return new Ticket(this);
         }
 
-        private Builder copy(Ticket ticket) {
+        public Builder copy(Ticket ticket) {
             this.ticketId = ticket.ticketId;
             this.ticketDescription = ticket.ticketDescription;
             this.ticketIssue = ticket.ticketIssue;

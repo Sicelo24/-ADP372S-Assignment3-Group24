@@ -19,11 +19,11 @@ public class Report {
     }
 
     public String getReportId() {
-
         return reportId;
     }
 
     public String getReportAuth() {
+
         return reportAuth;
     }
 
@@ -39,6 +39,7 @@ public class Report {
                 ", reportDate=" + reportDate +
                 '}';
     }
+
 
     public static class Builder {
         private String reportId, reportAuth, reportDate;
