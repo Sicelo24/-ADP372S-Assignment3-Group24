@@ -5,12 +5,13 @@ import za.ac.cput.repository.entity.AuditorRepository;
 import za.ac.cput.repository.impl.IAuditorRepository;
 import za.ac.cput.service.impl.IAuditorService;
 
+import java.util.HashSet;
 import java.util.Set;
 
 public class AuditorService implements IAuditorService {
 
     private static AuditorService service = null;
-    private IAuditorRepository repository;
+    private AuditorRepository repository;
 
     private AuditorService(){this.repository = AuditorRepository.getRepository();}
 
@@ -40,11 +41,30 @@ public class AuditorService implements IAuditorService {
     }
 
     @Override
-    public boolean delete(String s) {
-        return repository.delete(s);
-
-
+    public boolean delete(String s) { return repository.delete(s);
     }
+    public Set<Auditor> getAllAuditorsStartWithA(){
+        Set<Auditor> auditorWithA = new HashSet<Auditor>();
+        Set<Auditor> auditors = getAll();
+        for(Auditor auditor: auditors){
+            if(auditor.getAuditorID().trim().toLowerCase().startsWith("a")){
+                auditorWithA.add(auditor);
+            }
+        }
+        return auditorWithA;
+    }//This supposed to be race clas under demography
+    public Auditor getAuditorGivenFirstName(String auditorName){
+        Auditor a = null;
+        Set<Auditor> auditors = getAll();
+        for(Auditor auditor: auditors){
+            if(auditor.getAuditorFirstName().equals(auditorName)){
 
+                a = auditor;
+                break;
 
+            }
+        }
+
+        return a;
+    }
 }
