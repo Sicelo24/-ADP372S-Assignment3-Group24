@@ -15,10 +15,9 @@ public class AuditorRepositoryTest {
     public void setUp() throws Exception {
         repository = AuditorRepository.getRepository();
         auditor = AuditorFactory.buildAuditor("215041720"
-                , "123"
                 , "Lindokuhle"
                 , "Xaki"
-                , "0744317738");
+                ,  "0744317738");
     }
 
 
@@ -50,11 +49,11 @@ public class AuditorRepositoryTest {
 
     @Test
     public void update() {
-    Auditor revise = new Auditor.Builder().copy(auditor).setAuditorFirstName("Melo").setAuditorSurname("Dyidi").Build();
-    revise = repository.update(revise);
-    assertEquals(auditor.getAuditorID(), revise.getAuditorID());
-    System.out.println("Update: " + revise);
-}
+        Auditor revise = new Auditor.Builder().copy(auditor).setAuditorFirstName("Melo").setAuditorSurname("Dyidi").build();
+        revise = repository.update(revise);
+        assertEquals(auditor.getAuditorID(), revise.getAuditorID());
+        System.out.println("Update: " + revise);
+    }
 
     @Test
     public void delete() {
@@ -63,4 +62,6 @@ public class AuditorRepositoryTest {
         assertNull(repository.read("215041720"));
         System.out.println("Deleted\n" + repository.read("215041720"));
 
-}}
+    }
+
+}

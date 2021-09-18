@@ -18,28 +18,24 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class AuditorFactoryTest {
 
-
     Auditor auditor;
     Auditor auditor2;
 
     @BeforeEach
 
     public void setUp() throws Exception {
-        auditor = AuditorFactory.buildAuditor(
-                 "215041720"
-                ,"101"
+        auditor = AuditorFactory.buildAuditor("215041720"
                 ,"Lindokuhle"
                 ,"Xaki"
                 ,"06555111285");
 
 
-    auditor2= AuditorFactory.buildAuditor(
-            "218275041"
-            ,"201"
-            ,"Melokuhle"
-            ,"Athandwa"
-            ,"0744317738");
-}
+
+        auditor2= AuditorFactory.buildAuditor("218275041"
+                ,"Melokuhle"
+                ,"Athandwa"
+                ,"0744317738");
+    }
     //Building auditor test
     @Test
     void buildAuditor() {
@@ -52,7 +48,7 @@ class AuditorFactoryTest {
     @Test
     void objectEquality() {
         assertEquals(auditor2, auditor2);
-        }
+    }
 
     @Test
     void testIdentity() {
@@ -81,4 +77,5 @@ class AuditorFactoryTest {
 
         assertSame(auditor, auditor2);
     }
+
 }
