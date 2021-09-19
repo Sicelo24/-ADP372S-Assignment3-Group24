@@ -17,12 +17,7 @@ public class IssueFactory {
         String issueId = KeyGenerator.genratedId();
         return new Issue.Builder().issueId(issueId).issueDescription(issueDescription).issueArea(issueArea)
                 .issueRaisedDate(issueRaisedDate).issueResolvedDate(issueResolvedDate).issueStatus(issueStatus)
-                .isResolved(isResolved).isValidated(isValidated).Build();
+                .isResolved(isResolved).isValidated(isValidated).build();
     }
-
-    public static Issue copyFromIssue(Issue issue){
-        return new Issue.Builder().Copy(issue);
-    }
-
 
 }

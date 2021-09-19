@@ -65,7 +65,7 @@ public class Issue {
             return this;
         }
 
-        public Issue Copy(Issue issue){
+        public Builder copy(Issue issue){
             this.issueId = issue.issueId;
             this.issueDescription = issue.issueDescription;
             this.issueArea = issue.issueArea;
@@ -74,10 +74,10 @@ public class Issue {
             this.issueStatus = issue.issueStatus;
             this.isResolved = issue.isResolved;
             this.isValidated = issue.isValidated;
-            return new Issue(this);
+            return this;
         }
 
-        public Issue Build(){
+        public Issue build(){
             return new Issue(this);
         }
 
@@ -113,11 +113,6 @@ public class Issue {
 
     public boolean isValidated() {
         return isValidated;
-    }
-
-    public Issue setIssueDescription(String description){
-        this.issueDescription = description;
-        return this;
     }
 
     @Override

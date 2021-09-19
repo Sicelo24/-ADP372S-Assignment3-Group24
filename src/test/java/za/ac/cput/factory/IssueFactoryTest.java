@@ -28,8 +28,8 @@ class IssueFactoryTest {
     }
 
     @Test void testEquality(){
-        issue4 = IssueFactory.copyFromIssue(issue);
-        assertEquals(issue.getIssueId(), issue4.getIssueId());
+        issue4 = new Issue.Builder().copy(issue).build();
+        assertEquals(issue.getIssueArea(), issue4.getIssueArea());
         System.out.println("Objects are equal because issue was copied into issue4");
     }
 

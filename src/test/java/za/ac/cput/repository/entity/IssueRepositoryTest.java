@@ -39,7 +39,7 @@ class IssueRepositoryTest {
 
     @Test
     void c_update() {
-        Issue updatedIssue = IssueFactory.copyFromIssue(issue_2).setIssueDescription("Not Qualified Staff");
+        Issue updatedIssue = new Issue.Builder().copy(issue_2).issueDescription("Not Qualified Staff").build();
         assertNotNull(issueRepository.update(updatedIssue));
     }
 
