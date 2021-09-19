@@ -6,15 +6,20 @@ package za.ac.cput.entity;
 
 */
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 
 public class Auditor {
+    @Id
     private String auditorID;
     private String auditorFirstName;
     private String auditorSurname;
     private String cellphone;
 
 
-    private Auditor(){}
+    public Auditor(){}
 
     private Auditor(Builder builder) {
         this.auditorID = builder.auditorID;
@@ -22,6 +27,9 @@ public class Auditor {
         this.auditorSurname = builder.auditorSurname;;
         this.cellphone = builder.cellphone;
     }
+
+
+
     public String getAuditorID() {
         return auditorID;
     }

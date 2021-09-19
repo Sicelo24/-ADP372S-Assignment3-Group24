@@ -6,7 +6,8 @@ import za.ac.cput.service.IService;
 import java.util.Set;
 
 public interface IAuditorService extends IService<Auditor, String> {
-    Set<Auditor> getAll();
+    public Set<Auditor> getAll();
+    public Auditor getAuditorGivenFirstName(String auditorFirstName);
 
 
 }
