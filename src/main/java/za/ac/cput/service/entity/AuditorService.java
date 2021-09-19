@@ -1,47 +1,54 @@
 package za.ac.cput.service.entity;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import za.ac.cput.entity.Auditor;
-import za.ac.cput.repository.entity.AuditorRepository;
+import za.ac.cput.repository.impl.AuditorRepository;
 import za.ac.cput.repository.impl.IAuditorRepository;
+import za.ac.cput.service.IService;
 import za.ac.cput.service.impl.IAuditorService;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.stream.Collectors;
+
+@Service
 
 public class AuditorService implements IAuditorService {
 
     private static AuditorService service = null;
+
+    @Autowired
     private AuditorRepository repository;
 
-    private AuditorService(){this.repository = AuditorRepository.getRepository();}
-
-    public static AuditorService getService(){
-        if(service == null){service = new AuditorService();}
-        return service;
-    }
-
-    @Override
-    public Set<Auditor> getAll() {
-        return this.repository.getAll();
-    }
 
     @Override
     public Auditor create(Auditor auditor) {
-        return this.repository.create(auditor);
+        return this.repository.save(auditor);
     }
 
     @Override
-    public Auditor read(String s) {
-        return this.repository.read(s);
+    public Auditor read(String auditorID) {
+        return this.repository.findById(auditorID).orElse(null);
     }
 
     @Override
     public Auditor update(Auditor auditor) {
-        return repository.update(auditor);
+        if (this.repository.existsById(auditor.getAuditorID()))
+        return repository.save(auditor);
+        return null;
     }
 
     @Override
-    public boolean delete(String s) { return repository.delete(s);
+    public boolean delete(String auditorID) {
+        this.repository.deleteById(auditorID);
+        if (this.repository.existsById(auditorID))
+            return false;
+        else
+            return true;
+    }
+    public Set<Auditor> getAll(){
+        return this.repository.findAll().stream().collect(Collectors.toSet());
     }
     public Set<Auditor> getAllAuditorsStartWithA(){
         Set<Auditor> auditorWithA = new HashSet<Auditor>();
@@ -52,12 +59,13 @@ public class AuditorService implements IAuditorService {
             }
         }
         return auditorWithA;
-    }//This supposed to be race clas under demography
-    public Auditor getAuditorGivenFirstName(String auditorName){
+    }
+
+    public Auditor getAuditorGivenFirstName(String auditorFirstName){
         Auditor a = null;
         Set<Auditor> auditors = getAll();
         for(Auditor auditor: auditors){
-            if(auditor.getAuditorFirstName().equals(auditorName)){
+            if(auditor.getAuditorFirstName().equals(auditorFirstName)){
 
                 a = auditor;
                 break;

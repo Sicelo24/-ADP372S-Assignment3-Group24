@@ -5,7 +5,7 @@ import za.ac.cput.repository.impl.IAuditorRepository;
 
 import java.util.*;
 import java.util.Set;
-
+@Deprecated
 public class AuditorRepository implements IAuditorRepository {
 
     private static AuditorRepository repository = null;

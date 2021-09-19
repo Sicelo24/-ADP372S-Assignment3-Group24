@@ -9,7 +9,7 @@ import za.ac.cput.service.entity.TicketService;
 
 import java.util.Set;
 
-import static org.junit.Assert.assertNotNull;
+//import static org.junit.Assert.assertNotNull;
 import static org.junit.jupiter.api.Assertions.*;
 
 @TestMethodOrder(MethodOrderer.MethodName.class)
