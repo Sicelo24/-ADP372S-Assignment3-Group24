@@ -8,10 +8,9 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import za.ac.cput.entity.Ticket;
 import za.ac.cput.factory.TicketFactory;
-import za.ac.cput.repository.entity.TicketRepository;
 
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
+import static org.junit.jupiter.api.Assertions.*;
+
 
 class TicketRepositoryTest {
 
