@@ -5,6 +5,6 @@ import za.ac.cput.controller.IssueController;
 
 public class AuditApplication {
     public static void main(String[] args) {
-        SpringApplication.run(IssueController.class,args);
+        SpringApplication.run(AuditApplication.class,args);
     }
 }
