@@ -1,11 +1,13 @@
 package za.ac.cput.service.entity;
 
+import org.springframework.stereotype.Service;
 import za.ac.cput.entity.Ticket;
 import za.ac.cput.repository.entity.TicketRepository;
 import za.ac.cput.service.impl.ITicketService;
 
 import java.util.Set;
 
+@Service
 public class TicketService implements ITicketService {
 
     private static TicketService ticketService = null;
