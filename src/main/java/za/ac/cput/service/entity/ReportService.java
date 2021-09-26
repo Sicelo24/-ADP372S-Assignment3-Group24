@@ -35,20 +35,21 @@ public class ReportService implements IReportService {
         return this.reportRepository.create(report);
     }
 
-    @Override
-    public Report read(Integer s) {
-        return this.reportRepository.read(s);
+    public Report read(Integer integer) {
+        return this.reportRepository.read(integer);
     }
+
 
     @Override
     public Report update(Report report) {
+
         return this.reportRepository.update(report);
     }
 
-    @Override
-    public boolean delete(Integer s) {
-        return this.reportRepository.delete(s);
+    public boolean delete(Integer integer) {
+        return this.reportRepository.delete(integer);
     }
+
 
     @Override
     public Set<Report> getAll() {
