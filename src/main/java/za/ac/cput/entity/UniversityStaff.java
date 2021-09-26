@@ -6,7 +6,7 @@
 package za.ac.cput.entity;
 
 public class UniversityStaff {
-   private String staffID, staffFirstName, staffSurname,cellphone;
+    private String staffID, staffFirstName, staffSurname,cellphone;
 
     private UniversityStaff(Builder builder){
         this.staffID=builder.staffID;
@@ -24,8 +24,8 @@ public class UniversityStaff {
             return this;
         }
         public Builder setstaffFirstName(String staffFirstName){
-                this.staffFirstName = staffFirstName;
-                return this;
+            this.staffFirstName = staffFirstName;
+            return this;
         }
         public Builder setstaffSurname(String staffSurname){
             this.staffSurname = staffSurname;
@@ -41,7 +41,7 @@ public class UniversityStaff {
             this.staffFirstName = UniversityStaff.staffFirstName;
             this.staffSurname = UniversityStaff.staffSurname;
             this.cellphone = UniversityStaff.cellphone;
-           return this;
+            return this;
         }
 
         public UniversityStaff Build(){
@@ -76,3 +76,4 @@ public class UniversityStaff {
                 '}';
     }
 }
+

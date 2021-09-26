@@ -25,47 +25,47 @@ public class Issue {
         private String issueId, issueDescription, issueArea, issueRaisedDate, issueResolvedDate;
         private boolean issueStatus, isResolved, isValidated;
 
-        public Builder issueId(){
+        public Builder issueId(String issueId){
             this.issueId = issueId;
             return this;
         }
 
-        public Builder issueDescription(){
+        public Builder issueDescription(String issueDescription){
             this.issueDescription = issueDescription;
             return this;
         }
 
-        public Builder issueArea(){
+        public Builder issueArea(String issueArea){
             this.issueArea = issueArea;
             return this;
         }
 
-        public Builder issueRaisedDate(){
+        public Builder issueRaisedDate(String issueRaisedDate){
             this.issueRaisedDate = issueRaisedDate;
             return this;
         }
 
-        public Builder issueResolvedDate(){
+        public Builder issueResolvedDate(String issueResolvedDate){
             this.issueResolvedDate = issueResolvedDate;
             return this;
         }
 
-        public Builder issueStatus(){
+        public Builder issueStatus(boolean issueStatus){
             this.issueStatus = issueStatus;
             return this;
         }
 
-        public Builder isResolved(){
+        public Builder isResolved(boolean isResolved){
             this.isResolved = isResolved;
             return this;
         }
 
-        public Builder isValidated(){
+        public Builder isValidated(boolean isValidated){
             this.isValidated = isValidated;
             return this;
         }
 
-        public Builder Copy(Issue issue){
+        public Issue Copy(Issue issue){
             this.issueId = issue.issueId;
             this.issueDescription = issue.issueDescription;
             this.issueArea = issue.issueArea;
@@ -74,7 +74,7 @@ public class Issue {
             this.issueStatus = issue.issueStatus;
             this.isResolved = issue.isResolved;
             this.isValidated = issue.isValidated;
-            return this;
+            return new Issue(this);
         }
 
         public Issue Build(){
@@ -113,6 +113,11 @@ public class Issue {
 
     public boolean isValidated() {
         return isValidated;
+    }
+
+    public Issue setIssueDescription(String description){
+        this.issueDescription = description;
+        return this;
     }
 
     @Override
