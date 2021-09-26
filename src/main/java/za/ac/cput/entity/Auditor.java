@@ -6,17 +6,20 @@ package za.ac.cput.entity;
 
 */
 
-@SuppressWarnings("ALL")
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 
 public class Auditor {
-    @SuppressWarnings("CanBeFinal")
-
+    @Id
     private String auditorID;
     private String auditorFirstName;
     private String auditorSurname;
     private String cellphone;
 
 
+    public Auditor(){}
 
     private Auditor(Builder builder) {
         this.auditorID = builder.auditorID;
@@ -24,6 +27,9 @@ public class Auditor {
         this.auditorSurname = builder.auditorSurname;;
         this.cellphone = builder.cellphone;
     }
+
+
+
     public String getAuditorID() {
         return auditorID;
     }
@@ -59,8 +65,8 @@ public class Auditor {
         private String cellphone;
 
 
-        public Builder auditorID(String auditorFirstName){
-            this.auditorID = auditorFirstName;
+        public Builder auditorID(String auditorID){
+            this.auditorID = auditorID;
             return this;
         }
         public Builder auditorFirstName(String auditorFirstName){
@@ -98,7 +104,7 @@ public class Auditor {
 
 
 
-        public Auditor Build()  {
+        public Auditor build()  {
             return new Auditor(this);
         }
 
@@ -114,6 +120,5 @@ public class Auditor {
 
 
 
-    }}
-
-
+    }
+}
