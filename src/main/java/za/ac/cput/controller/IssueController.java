@@ -20,10 +20,6 @@ public class IssueController {
     @Autowired
     private IssueService service;
 
-    private IssueController() {
-        service = IssueService.createIssueService();
-    }
-
     @PostMapping("/create")
     public Issue create(@RequestBody Issue issue) {
         Issue newIssue = IssueFactory.createIssue(issue.getIssueDescription(),
