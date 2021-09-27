@@ -5,12 +5,11 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import za.ac.cput.entity.Ticket;
 import za.ac.cput.factory.TicketFactory;
-import za.ac.cput.service.entity.TicketService;
 
 import java.util.Set;
 
-import static org.junit.Assert.assertNotNull;
 import static org.junit.jupiter.api.Assertions.*;
+
 
 @TestMethodOrder(MethodOrderer.MethodName.class)
 class TicketServiceTest {
