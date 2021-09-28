@@ -18,21 +18,20 @@ public class UniversityStaff {
     public static class Builder{
 
         private String staffID, staffFirstName, staffSurname, cellphone;
-
-        public Builder setStaffID(String staffID){
-            this.staffID = staffID;
+        public Builder staffID(String staffID){
+            this.staffID = this.staffID;
             return this;
         }
-        public Builder setstaffFirstName(String staffFirstName){
-            this.staffFirstName = staffFirstName;
+        public Builder staffFirstName(String staffFirstName){
+            this.staffFirstName = this.staffFirstName;
             return this;
         }
-        public Builder setstaffSurname(String staffSurname){
-            this.staffSurname = staffSurname;
+        public Builder staffSurname(String staffSurname){
+            this.staffSurname = this.staffSurname;
             return this;
         }
-        public Builder setcellphone(String cellphone){
-            this.cellphone = cellphone;
+        public Builder cellphone(String cellphone){
+            this.cellphone = this.cellphone;
             return this;
         }
 
@@ -45,10 +44,6 @@ public class UniversityStaff {
         }
 
         public UniversityStaff Build(){
-            return new UniversityStaff(this);
-        }
-
-        public UniversityStaff build() {
             return new UniversityStaff(this);
         }
     }
