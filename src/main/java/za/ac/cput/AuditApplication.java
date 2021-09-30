@@ -1,10 +1,11 @@
 package za.ac.cput;
 
 import org.springframework.boot.SpringApplication;
-import za.ac.cput.controller.IssueController;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+@SpringBootApplication
 public class AuditApplication {
     public static void main(String[] args) {
-        SpringApplication.run(IssueController.class,args);
+        SpringApplication.run(AuditApplication.class,args);
     }
 }
