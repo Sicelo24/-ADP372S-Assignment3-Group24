@@ -15,6 +15,14 @@ public class UniversityStaff {
         this.cellphone=builder.cellphone;
     }
 
+    public UniversityStaff create(UniversityStaff universityStaff) {
+        return universityStaff;
+    }
+
+    public UniversityStaff update(UniversityStaff universityStaff) {
+        return universityStaff;
+    }
+
     public static class Builder{
 
         private String staffID, staffFirstName, staffSurname, cellphone;
