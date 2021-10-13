@@ -9,37 +9,31 @@ package za.ac.cput.service.entity;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 import za.ac.cput.entity.Issue;
 import za.ac.cput.factory.IssueFactory;
-import za.ac.cput.service.entity.IssueService;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 @TestMethodOrder(MethodOrderer.MethodName.class)
+@SpringBootTest
 class IssueServiceTest {
 
-    private static IssueService service = IssueService.createIssueService();
-
+    @Autowired
+    private static IssueService service;
     private static Issue issue = IssueFactory.createIssue("No Elevator to 3rd floor", "Disability",
             "05/06/21","NA",true, false,true);
 
-    private static Issue issue_2 = IssueFactory.createIssue("Not enough Lecturers", "Academic",
-            "","",true, false,false);
-
-    private static Issue issue_3 = IssueFactory.createIssue("Empty","","","",false,false,false);
-
     @Test
     void a_create() {
-        service.create(issue);
-        Issue success = service.create(issue_2);
-        service.create(issue_3);
+        Issue success = this.service.create(issue);
         assertNotNull(success);
-        System.out.println("Created two issues");
+        System.out.println("Created issue "+issue);
     }
 
     @Test
     void b_read() {
-        Issue readIssue = service.read(issue.getIssueId());
+        Issue readIssue = this.service.read(issue.getIssueId());
         assertEquals("Disability", issue.getIssueArea());
         System.out.println("Issue Read Success\n"+readIssue);
     }
@@ -48,13 +42,13 @@ class IssueServiceTest {
     void c_update() {
         Issue updatedIssue = new Issue.Builder().copy(issue).issueDescription("No Elevator at all").build();
         service.update(updatedIssue);
-        assertEquals("No Elevator at all", service.read(issue.getIssueId()).getIssueDescription());
+        assertEquals("No Elevator at all", this.service.read(issue.getIssueId()).getIssueDescription());
         System.out.println("Updated Issue Description.\n"+service.read(issue.getIssueId()));
     }
 
     @Test
     void d_delete() {
-        boolean success = service.delete(issue_3.getIssueId());
+        boolean success = service.delete(issue.getIssueId());
         assertTrue(success);
         System.out.println("Issue successfully deleted.");
     }

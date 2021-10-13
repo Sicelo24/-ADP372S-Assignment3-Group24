@@ -12,6 +12,7 @@ import za.ac.cput.repository.impl.IIssueRepository;
 import java.util.HashSet;
 import java.util.Set;
 
+@Deprecated
 public class IssueRepository implements IIssueRepository {
 
     private static IssueRepository issueRepository = null;
