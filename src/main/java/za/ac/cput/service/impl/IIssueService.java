@@ -11,4 +11,6 @@ import java.util.Set;
 
 public interface IIssueService extends IService<Issue, String> {
     public Set<Issue> getAll();
+    public Set<Issue> getAllResolved();
+    public Set<Issue> getAllUnResolved();
 }

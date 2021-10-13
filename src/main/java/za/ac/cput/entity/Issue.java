@@ -6,9 +6,18 @@
 
 package za.ac.cput.entity;
 
-public class Issue {
-    private String issueId, issueDescription, issueArea, issueRaisedDate, issueResolvedDate;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.io.Serializable;
+
+@Entity
+public class Issue implements Serializable {
+    @Id
+    private String issueId;
+    private String issueDescription, issueArea, issueRaisedDate, issueResolvedDate;
     private boolean issueStatus, isResolved, isValidated;
+
+    private Issue(){}
 
     private Issue(Builder builder){
         this.issueId = builder.issueId;
@@ -19,6 +28,52 @@ public class Issue {
         this.issueStatus = builder.issueStatus;
         this.isResolved = builder.isResolved;
         this.isValidated = builder.isValidated;
+    }
+
+    public String getIssueId() {
+        return issueId;
+    }
+
+    public String getIssueDescription() {
+        return issueDescription;
+    }
+
+    public String getIssueArea() {
+        return issueArea;
+    }
+
+    public String getIssueRaisedDate() {
+        return issueRaisedDate;
+    }
+
+    public String getIssueResolvedDate() {
+        return issueResolvedDate;
+    }
+
+    public boolean isIssueStatus() {
+        return issueStatus;
+    }
+
+    public boolean isResolved() {
+        return isResolved;
+    }
+
+    public boolean isValidated() {
+        return isValidated;
+    }
+
+    @Override
+    public String toString() {
+        return "Issue{" +
+                "issueId='" + issueId + '\'' +
+                ", issueDescription='" + issueDescription + '\'' +
+                ", issueArea='" + issueArea + '\'' +
+                ", issueRaisedDate='" + issueRaisedDate + '\'' +
+                ", issueResolvedDate='" + issueResolvedDate + '\'' +
+                ", issueStatus=" + issueStatus +
+                ", isResolved=" + isResolved +
+                ", isValidated=" + isValidated +
+                '}';
     }
 
     public static class Builder {
@@ -82,51 +137,4 @@ public class Issue {
         }
 
     }
-
-    public String getIssueId() {
-        return issueId;
-    }
-
-    public String getIssueDescription() {
-        return issueDescription;
-    }
-
-    public String getIssueArea() {
-        return issueArea;
-    }
-
-    public String getIssueRaisedDate() {
-        return issueRaisedDate;
-    }
-
-    public String getIssueResolvedDate() {
-        return issueResolvedDate;
-    }
-
-    public boolean isIssueStatus() {
-        return issueStatus;
-    }
-
-    public boolean isResolved() {
-        return isResolved;
-    }
-
-    public boolean isValidated() {
-        return isValidated;
-    }
-
-    @Override
-    public String toString() {
-        return "Issue{" +
-                "issueId='" + issueId + '\'' +
-                ", issueDescription='" + issueDescription + '\'' +
-                ", issueArea='" + issueArea + '\'' +
-                ", issueRaisedDate='" + issueRaisedDate + '\'' +
-                ", issueResolvedDate='" + issueResolvedDate + '\'' +
-                ", issueStatus=" + issueStatus +
-                ", isResolved=" + isResolved +
-                ", isValidated=" + isValidated +
-                '}';
-    }
-
 }

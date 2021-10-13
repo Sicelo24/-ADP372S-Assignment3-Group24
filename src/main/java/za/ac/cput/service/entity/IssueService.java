@@ -6,50 +6,58 @@
 
 package za.ac.cput.service.entity;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import za.ac.cput.entity.Issue;
-import za.ac.cput.repository.entity.IssueRepository;
+import za.ac.cput.repository.impl.IssueRepository;
 import za.ac.cput.service.impl.IIssueService;
-
 import java.util.Set;
+import java.util.stream.Collectors;
 
 @Service
 public class IssueService implements IIssueService {
 
-    private static IssueService issueService = null;
-    private static IssueRepository repository = null;
-
-    private IssueService(){
-        repository = IssueRepository.createIssueRepository();
-    }
-
-    public static IssueService createIssueService(){
-        if(issueService == null) issueService = new IssueService();
-        return issueService;
-    }
+    @Autowired
+    private IssueRepository repository;
 
     @Override
     public Issue create(Issue issue) {
-        return repository.create(issue);
+        //return repository.create(issue);
+        return this.repository.save(issue);
     }
 
     @Override
-    public Issue read(String s) {
-        return repository.read(s);
+    public Issue read(String issueId) {
+        //return repository.read(issueId);
+        return this.repository.findById(issueId).orElse(null);
     }
 
     @Override
     public Issue update(Issue issue) {
-        return repository.update(issue);
+        //return repository.update(issue);
+        return this.read(issue.getIssueId()) != null ? repository.save(issue) : null;
     }
 
     @Override
-    public boolean delete(String s) {
-        return repository.delete(s);
+    public boolean delete(String issueId) {
+        //return repository.delete(issueId);
+        repository.deleteById(issueId);
+        return this.read(issueId) == null ? true : false;
     }
 
     @Override
     public Set<Issue> getAll() {
-        return repository.getAll();
+        //return repository.getAll();
+        return repository.findAll().stream().collect(Collectors.toSet());
+    }
+
+    @Override
+    public Set<Issue> getAllResolved() {
+        return repository.findAll().stream().filter(issue -> issue.isResolved()).collect(Collectors.toSet());
+    }
+
+    @Override
+    public Set<Issue> getAllUnResolved() {
+        return repository.findAll().stream().filter(issue -> !issue.isResolved()).collect(Collectors.toSet());
     }
 }
