@@ -2,9 +2,7 @@ package za.ac.cput.repository.entity;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import za.ac.cput.entity.Auditor;
 import za.ac.cput.entity.UniversityStaff;
-import za.ac.cput.factory.AuditorFactory;
 import za.ac.cput.factory.UniversityStaffFactory;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -46,14 +44,14 @@ class UniversityStaffRepositoryTest {
         assertNotNull(repository.read(UniversityStaff.getStaffID()));
         System.out.println("Read\n" + repository.read(UniversityStaff.getStaffID()));
     }
-
-    @Test
-    public void update() {
-        UniversityStaff revise = new UniversityStaff.Builder().Copy(UniversityStaff).setstaffFirstName("AVO").setstaffSurname("CALEB").Build();
-        revise = repository.update(revise);
-        assertEquals(UniversityStaff.getStaffID(), revise.getStaffID());
-        System.out.println("Update: " + revise);
-    }
+//
+//    @Test
+//    public void update() {
+//        UniversityStaff revise = new UniversityStaff.Builder().Copy(UniversityStaff).setstaffFirstName("AVO").setstaffSurname("CALEB").Build();
+//        revise = repository.update(revise);
+//        assertEquals(UniversityStaff.getStaffID(), revise.getStaffID());
+//        System.out.println("Update: " + revise);
+//    }
 
 
     @Test
