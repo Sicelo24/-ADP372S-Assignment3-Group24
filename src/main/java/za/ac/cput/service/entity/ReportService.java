@@ -16,6 +16,8 @@ import java.util.Set;
 public class ReportService implements IReportService {
 
     public static IReportService reportSer = null;
+    public Integer delete;
+    public Integer read;
     private ReportRepository reportRepository;
 
     private ReportService(){
@@ -35,7 +37,9 @@ public class ReportService implements IReportService {
         return this.reportRepository.create(report);
     }
 
+    @Override
     public Report read(Integer integer) {
+
         return this.reportRepository.read(integer);
     }
 
@@ -46,13 +50,15 @@ public class ReportService implements IReportService {
         return this.reportRepository.update(report);
     }
 
+    @Override
     public boolean delete(Integer integer) {
         return this.reportRepository.delete(integer);
     }
 
-
     @Override
     public Set<Report> getAll() {
+
         return this.reportRepository.getAll();
     }
+
 }
