@@ -22,8 +22,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class ReportServiceTest{
 
-    private static ReportService reportSer = (ReportService) ReportService.getReportService();
-    private static Report report = ReportFactory.createReport("215126505",
+    private static final ReportService reportSer = (ReportService) ReportService.getReportService();
+    private static final Report report = ReportFactory.createReport("215126505",
             "Mr. M Xakekile",
             "02 August 2021");
 
@@ -33,17 +33,16 @@ public class ReportServiceTest{
 
     @Test
     void create() {
-        Report report1 = reportSer.create(reportSer.create(report));
         assertEquals(report.getReportId(), report.getReportId());
         System.out.println("\nReport created: " + report);
     }
 
     @Test
     void read() {
-       /* Report read = reportSer.read(reportSer.getReportId());
+       Report read = reportSer.read(reportSer.read);
         assertNotNull(read);
-        System.out.println("\nTo String:\n" + read.toString());
-        */
+        System.out.println("\nTo String:\n" + read);
+
     }
 
     @Test
@@ -59,10 +58,9 @@ public class ReportServiceTest{
 
     @Test
     void delete() {
-       /* boolean deleteSuccessful = reportSer.delete(reportSer.getReportId());
+       boolean deleteSuccessful = reportSer.delete(reportSer.delete);
         assertTrue(deleteSuccessful);
 
-        */
     }
 
     @Test

@@ -16,6 +16,11 @@ public class UserAccountService implements IUserAccountService {
     @Autowired
     private UserAccountRepository repository;
 
+
+    public UserAccount login(String email, String password){
+        return this.repository.findById(email).orElse(null);
+    }
+
     @Override
     public UserAccount create(UserAccount userAccount) {
         return this.repository.save(userAccount);

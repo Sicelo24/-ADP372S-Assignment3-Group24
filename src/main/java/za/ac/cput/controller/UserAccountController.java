@@ -15,6 +15,25 @@ public class UserAccountController {
     @Autowired
     private UserAccountService service;
 
+    @PostMapping("/create {login}")
+    public UserAccount login(@PathVariable String email, String password){
+        boolean emailExist = false;
+        boolean passwordExist = false;
+        if (email != null){
+            emailExist = true;
+        }
+        if (emailExist = true) {
+            return service.read(email);
+        }
+        if (password != null){
+            passwordExist = true;
+        }
+        if (passwordExist = true){
+            return service.read(password);
+        }
+        else return null;
+    }
+
     @PostMapping("/create")
     public UserAccount create(@RequestBody UserAccount userAccount) {
         UserAccount newUserAccount = UserAccountFactory.buildUserAccount(userAccount.getUserId(),
