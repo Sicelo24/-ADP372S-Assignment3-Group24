@@ -8,10 +8,11 @@ package za.ac.cput.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.io.Serializable;
 
 @Entity
 
-public class Auditor {
+public class Auditor implements Serializable {
     @Id
     private String auditorID;
     private String auditorFirstName;

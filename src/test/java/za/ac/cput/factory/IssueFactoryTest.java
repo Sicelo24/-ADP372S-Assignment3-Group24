@@ -19,10 +19,10 @@ class IssueFactoryTest {
     Issue issue, issue2, issue3, issue4;
     @BeforeEach
     void setup(){
-        issue = IssueFactory.createIssue("No Elevator to 3rd floor", "Disability",
+        issue = IssueFactory.createIssue("k45j","No Elevator to 3rd floor", "Disability",
                 "05/06/21","NA",true, false,true);
 
-        issue2 = IssueFactory.createIssue("Not enough Lecturers", "Academic",
+        issue2 = IssueFactory.createIssue("k228","Not enough Lecturers", "Academic",
                 "20/02/21","03/05/21",true, true,true);
         issue3 = issue;
     }

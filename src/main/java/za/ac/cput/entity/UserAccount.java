@@ -6,12 +6,21 @@ package za.ac.cput.entity;
  * Date: 1st June 2021
  */
 
-public class UserAccount {
-private String userId;
-private String email;
-private String password;
-private boolean loginStatus;
-private String registerDate;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.io.Serializable;
+
+@Entity
+public class UserAccount implements Serializable {
+
+    @Id
+    private String userId;
+    private String email;
+    private String password;
+    private int loginStatus;
+    private String registerDate;
+
+    private UserAccount(){}
 
     private UserAccount(Builder builder) {
         this.userId = builder.userId;
@@ -44,7 +53,7 @@ private String registerDate;
         return email;
     }
 
-    public boolean getLoginStatus() {
+    public int getLoginStatus() {
         return loginStatus;
     }
 
@@ -57,7 +66,7 @@ private String registerDate;
     private String userId;
     private String email;
     private String password;
-    private boolean loginStatus;
+    private int loginStatus;
     private String registerDate;
 
     public Builder setuserId(String userId){
@@ -72,7 +81,7 @@ private String registerDate;
         this.password = password;
         return this;
     }
-    public Builder setloginStatus(boolean loginStatus){
+    public Builder setloginStatus(int loginStatus){
         this.loginStatus = loginStatus;
         return this;
     }

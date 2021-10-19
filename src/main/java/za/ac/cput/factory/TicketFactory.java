@@ -10,14 +10,12 @@ import za.ac.cput.entity.Ticket;
 public class TicketFactory {
     public static Ticket buildTicket(String ticketId,
                                      String ticketDescription,
-                                     String ticketDate,
-                                     String ticketIssue)
+                                     String ticketDate)
     {
         return new Ticket.Builder()
                 .ticketId(ticketId)
                 .ticketDescription(ticketDescription)
                 .ticketDate(ticketDate)
-                .ticketIssue(ticketIssue)
                 .build();
     }
     public static Ticket.Builder copyFromTicket(Ticket ticket){

@@ -20,12 +20,10 @@ class TicketFactoryTest {
     void setUp() {
         ticket = TicketFactory.buildTicket("2",
                 "Student card complaint",
-                "10/03/2020",
-                "7");
+                "10/03/2020");
         ticket2 = TicketFactory.buildTicket("5",
                 "Student marks complaint",
-                "14/03/2020",
-                "9");
+                "14/03/2020");
         ticket3 = ticket;
     }
 

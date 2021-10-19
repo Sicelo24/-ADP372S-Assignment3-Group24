@@ -12,8 +12,6 @@ import java.util.stream.Collectors;
 @Service
 public class TicketService implements ITicketService {
 
-    private static TicketService ticketService = null;
-
     @Autowired
     private TicketRepository repository;
 

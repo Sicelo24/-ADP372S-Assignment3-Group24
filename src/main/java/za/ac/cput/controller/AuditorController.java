@@ -20,21 +20,20 @@ public class AuditorController {
     @Autowired
     private AuditorService auditorService;
 
-    @RequestMapping(value = "create", method = RequestMethod.POST)
-
+    //@RequestMapping(value = "create", method = RequestMethod.POST)
+    @PostMapping("/create")
     public Auditor create(@RequestBody Auditor auditor) {
-        //@PostMapping("/create")
         Auditor newauditor = AuditorFactory.buildAuditor(auditor.getAuditorID(), auditor.getAuditorFirstName(),
                 auditor.getAuditorSurname(), auditor.getCellphone());
         return auditorService.create(newauditor);
     }
 
-    @GetMapping("/read{auditorID}")
+    @GetMapping("/read/{auditorID}")
     public Auditor read (@PathVariable String auditorID){
         return auditorService.read(auditorID);
 
     }
-    @PostMapping("/update")
+    @PutMapping("/update")
     public Auditor update(@RequestBody Auditor auditor){
         return auditorService.update(auditor);
     }

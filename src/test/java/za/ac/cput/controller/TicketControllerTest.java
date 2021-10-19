@@ -5,6 +5,7 @@
  */
 package za.ac.cput.controller;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
@@ -13,6 +14,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import za.ac.cput.entity.Issue;
 import za.ac.cput.entity.Ticket;
 import za.ac.cput.factory.TicketFactory;
 
@@ -24,8 +26,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class TicketControllerTest {
     private static Ticket ticket = TicketFactory.buildTicket("205"
             , "Academics"
-            , "22/09/2021"
-            , "17");
+            , "22/09/2021");
 
     @Autowired
     private TestRestTemplate restTemplate;
@@ -39,8 +40,8 @@ class TicketControllerTest {
         assertNotNull(postResponse.getBody());
         assertEquals(postResponse.getStatusCode(), HttpStatus.OK);
         ticket = postResponse.getBody();
-        System.out.println("Saved data: " + ticket);
-        assertEquals(ticket.getTicketId(), postResponse.getBody().getTicketId());
+        System.out.println("Saved data: " + postResponse.getBody());
+        //assertEquals(ticket.getTicketId(), postResponse.getBody().getTicketId());
     }
 
     @Test
