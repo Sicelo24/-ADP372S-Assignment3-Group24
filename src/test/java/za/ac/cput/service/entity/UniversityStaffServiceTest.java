@@ -9,7 +9,7 @@ import java.util.Set;
 import static org.junit.jupiter.api.Assertions.*;
 
 class UniversityStaffServiceTest {
-    private static UniversityStaffService service = UniversityStaffService.createUniversityStaffService();
+    private static UniversityStaffService service;
     private static UniversityStaff stuff = UniversityStaffFactory.buildUniversityStaff("218331827","Avuyile","Xozumthi","0839281109");
 
     @Test
