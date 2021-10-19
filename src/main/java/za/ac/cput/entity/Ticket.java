@@ -5,8 +5,13 @@
  */
 package za.ac.cput.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.io.Serializable;
 
-public class Ticket {
+@Entity
+public class Ticket implements Serializable {
+    @Id
     private String ticketId;
     private String ticketDescription;
     private String ticketDate;

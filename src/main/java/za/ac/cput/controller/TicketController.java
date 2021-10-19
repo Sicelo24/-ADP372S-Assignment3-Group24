@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.*;
 import za.ac.cput.entity.Ticket;
 import za.ac.cput.factory.TicketFactory;
 import za.ac.cput.service.entity.TicketService;
-
 import java.util.Set;
 
 @RestController
@@ -31,8 +30,8 @@ public class TicketController {
     }
 
     @GetMapping("/read")
-    public Ticket read(@RequestBody String id) {
-        return service.read(id);
+    public Ticket read(@PathVariable String ticketID) {
+        return service.read(ticketID);
     }
 
     @PostMapping("/update")
@@ -41,8 +40,8 @@ public class TicketController {
     }
 
     @DeleteMapping("/delete")
-    public String delete(@RequestBody String id){
-        return service.delete(id) ? "Successfully deleted." : "Could NOT Perform delete operation!";
+    public String delete(@PathVariable String ticketID){
+        return service.delete(ticketID) ? "Successfully deleted." : "Could NOT Perform delete operation!";
     }
 
     @GetMapping("/getall")
