@@ -9,6 +9,7 @@ import za.ac.cput.repository.impl.ITicketRepository;
 
 import java.util.*;
 
+@Deprecated
 public class TicketRepository implements ITicketRepository {
     private static TicketRepository repository = null;
     private Map<String, Ticket> tickets;
