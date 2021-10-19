@@ -5,6 +5,6 @@ import za.ac.cput.service.IService;
 
 import java.util.Set;
 
-public interface IUniversityStaff extends IService<UniversityStaff, String>{
+public interface IUniversityStaffService extends IService<UniversityStaff, String>{
     Set<UniversityStaff> getAll();
 }

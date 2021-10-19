@@ -5,7 +5,7 @@ import za.ac.cput.repository.impl.IUniversityStaffRepository;
 
 import java.util.HashSet;
 import java.util.Set;
-
+@Deprecated
 public class UniversityStaffRepository implements IUniversityStaffRepository {
     private static UniversityStaffRepository UniversityStaffRepository = null;
     private static za.ac.cput.repository.entity.UniversityStaffRepository repository;
