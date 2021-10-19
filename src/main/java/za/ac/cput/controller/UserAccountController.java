@@ -10,28 +10,14 @@ import za.ac.cput.service.entity.UserAccountService;
 import java.util.Set;
 
 @RestController
-@RequestMapping("/userAccount")
+@RequestMapping("/useraccount")
 public class UserAccountController {
     @Autowired
     private UserAccountService service;
 
-    @PostMapping("/create {login}")
+    @GetMapping("/login/{email}/{password}")
     public UserAccount login(@PathVariable String email, String password){
-        boolean emailExist = false;
-        boolean passwordExist = false;
-        if (email != null){
-            emailExist = true;
-        }
-        if (emailExist = true) {
-            return service.read(email);
-        }
-        if (password != null){
-            passwordExist = true;
-        }
-        if (passwordExist = true){
-            return service.read(password);
-        }
-        else return null;
+        return service.login(email, password);
     }
 
     @PostMapping("/create")
@@ -45,7 +31,7 @@ public class UserAccountController {
         return service.read(id);
     }
 
-    @PostMapping("/update")
+    @PutMapping("/update")
     public UserAccount update(@RequestBody UserAccount userAccount) {
         return service.update(userAccount);
     }

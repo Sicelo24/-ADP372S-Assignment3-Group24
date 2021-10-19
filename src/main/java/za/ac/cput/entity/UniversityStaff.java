@@ -5,8 +5,18 @@
 */
 package za.ac.cput.entity;
 
-public class UniversityStaff {
-    private String staffID, staffFirstName, staffSurname,cellphone;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.io.Serializable;
+
+@Entity
+public class UniversityStaff implements Serializable {
+    @Id
+    private String staffID;
+    private String staffFirstName, staffSurname,cellphone;
+
+    private UniversityStaff(){}
 
     private UniversityStaff(Builder builder){
         this.staffID=builder.staffID;

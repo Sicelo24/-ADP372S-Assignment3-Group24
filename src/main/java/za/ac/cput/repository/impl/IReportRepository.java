@@ -11,6 +11,7 @@ import za.ac.cput.repository.IRepository;
 
 import java.util.Set;
 
+@Deprecated
 public interface IReportRepository extends IRepository<Report, Integer> {
     Set<Report> getAll();
 }

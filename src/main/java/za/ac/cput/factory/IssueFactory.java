@@ -11,10 +11,10 @@ import za.ac.cput.util.KeyGenerator;
 
 public class IssueFactory {
 
-    public static Issue createIssue(String issueDescription, String issueArea,
+    public static Issue createIssue(String issueId, String issueDescription, String issueArea,
                                     String issueRaisedDate, String issueResolvedDate, boolean issueStatus,
                                     boolean isResolved, boolean isValidated){
-        String issueId = KeyGenerator.genratedId();
+        //String issueId = KeyGenerator.genratedId(); GENERATED AT FRONT END NOW
         return new Issue.Builder().issueId(issueId).issueDescription(issueDescription).issueArea(issueArea)
                 .issueRaisedDate(issueRaisedDate).issueResolvedDate(issueResolvedDate).issueStatus(issueStatus)
                 .isResolved(isResolved).isValidated(isValidated).build();

@@ -6,8 +6,15 @@ package za.ac.cput.entity;
  Date: 01 June 2021
 */
 
-public class Report {
-    private String reportId, reportAuth, reportDate;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.io.Serializable;
+
+@Entity
+public class Report implements Serializable {
+    @Id
+    private String reportId;
+    private String reportAuth, reportDate;
 
 
     private Report(){}

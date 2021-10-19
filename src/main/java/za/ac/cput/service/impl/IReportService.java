@@ -10,6 +10,6 @@ import za.ac.cput.entity.Report;
 import za.ac.cput.service.IService;
 import java.util.Set;
 
-public interface IReportService extends IService<Report, Integer> {
+public interface IReportService extends IService<Report, String> {
     Set<Report> getAll();
 }

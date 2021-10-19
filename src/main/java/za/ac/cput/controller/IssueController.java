@@ -23,7 +23,7 @@ public class IssueController {
 
     @PostMapping("/create")
     public Issue create(@RequestBody Issue issue) {
-        Issue newIssue = IssueFactory.createIssue(issue.getIssueDescription(),
+        Issue newIssue = IssueFactory.createIssue(issue.getIssueId(), issue.getIssueDescription(),
                 issue.getIssueArea(), issue.getIssueRaisedDate(), issue.getIssueResolvedDate(),
                 issue.isIssueStatus(), issue.isResolved(), issue.isValidated());
         return this.service.create(newIssue);
@@ -34,7 +34,7 @@ public class IssueController {
         return service.read(id);
     }
 
-    @PostMapping("/update")
+    @PutMapping("/update")
     public Issue update(@RequestBody Issue issue) {
         return service.update(issue);
     }

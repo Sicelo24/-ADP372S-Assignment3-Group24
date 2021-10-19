@@ -23,7 +23,7 @@ class TicketRepositoryTest {
         ticket = TicketFactory.buildTicket("444"
                 , "Received"
                 , "12 July"
-                , "17");
+                );
     }
 
     @Test

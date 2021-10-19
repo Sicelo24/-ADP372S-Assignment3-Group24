@@ -18,7 +18,7 @@ class IssueControllerTest {
 
     @Autowired
     private TestRestTemplate restTemplate;
-    private static Issue issue = IssueFactory.createIssue("More Security is needed","Admin Building","31/05/19","NA",true, true,true);
+    private static Issue issue = IssueFactory.createIssue("k228","More Security is needed","Admin Building","31/05/19","NA",true, true,true);
     private final String BASE_URL = "http://localhost:8080/issue";
 
     @Test @Disabled("Disabled create") void a_create() {

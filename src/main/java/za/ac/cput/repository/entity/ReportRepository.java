@@ -12,6 +12,7 @@ import za.ac.cput.repository.impl.IReportRepository;
 import java.util.HashSet;
 import java.util.Set;
 
+@Deprecated
 public class ReportRepository implements IReportRepository {
     private static ReportRepository reportRepository = null;
     private Set<Report> reportSet;

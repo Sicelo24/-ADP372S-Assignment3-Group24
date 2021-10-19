@@ -6,59 +6,46 @@ package za.ac.cput.service.entity;
  Date:  02 August 2021
 */
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import za.ac.cput.entity.Report;
-import za.ac.cput.repository.entity.ReportRepository;
+import za.ac.cput.repository.impl.ReportRepository;
 import za.ac.cput.service.impl.IReportService;
 
 import java.util.Set;
+import java.util.stream.Collectors;
 
-
+@Service
 public class ReportService implements IReportService {
 
-    public static IReportService reportSer = null;
-    public Integer delete;
-    public Integer read;
+    @Autowired
     private ReportRepository reportRepository;
-
-    private ReportService(){
-        this.reportRepository = (ReportRepository) ReportRepository.geReportRepository();
-    }
-
-    public static IReportService getReportService(){
-        if(reportSer == null) {
-            reportSer = new ReportService();
-        }
-        return reportSer;
-    }
 
     @Override
     public Report create(Report report) {
-
-        return this.reportRepository.create(report);
+        return this.reportRepository.save(report);
     }
 
     @Override
-    public Report read(Integer integer) {
-
-        return this.reportRepository.read(integer);
+    public Report read(String id) {
+        return this.reportRepository.findById(id).orElse(null);
     }
 
 
     @Override
     public Report update(Report report) {
-
-        return this.reportRepository.update(report);
+        return this.reportRepository.save(report);
     }
 
     @Override
-    public boolean delete(Integer integer) {
-        return this.reportRepository.delete(integer);
+    public boolean delete(String id) {
+        reportRepository.deleteById(id);
+        return this.read(id) == null ? true : false;
     }
 
     @Override
     public Set<Report> getAll() {
-
-        return this.reportRepository.getAll();
+        return reportRepository.findAll().stream().collect(Collectors.toSet());
     }
 
 }

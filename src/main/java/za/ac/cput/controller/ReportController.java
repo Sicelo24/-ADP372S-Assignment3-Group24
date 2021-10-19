@@ -17,55 +17,26 @@ public class ReportController {
 
     @PostMapping("/create")
     public Report create(@RequestBody Report report){
-        boolean reportExist = false;
         Report newReport = ReportFactory.
                 createReport(report.getReportId(),
                 report.getReportAuth(),
                 report.getReportDate());
-
-        if (newReport != null) {
-            reportExist = true;
-        }
-        if (reportExist) {
-            return reportService.create(newReport);
-        }
-        else return ReportFactory.createReport(null,null,null);
+        return reportService.create(newReport);
     }
 
-    @GetMapping("/read {reportId}")
-    public Report read(@PathVariable Integer id){
-        boolean reportExist = false;
-        if(id !=null){
-            reportExist = true;
-        }
-        if (reportExist = true) {
-            return reportService.read(id);
-        }
-        else return null;
+    @GetMapping("/read/{id}")
+    public Report read(@PathVariable String id){
+        return reportService.read(id);
     }
 
-    @PostMapping("/update")
+    @PutMapping("/update")
     public Report update(@RequestBody Report report){
-        boolean reportExist = false;
-        if(report !=null) {
-            reportExist = true;
-        }
-        if (reportExist) {
-            return reportService.update(report);
-        }
-        else return null;
+        return reportService.update(report);
     }
 
-    @DeleteMapping("/delete {reportId}")
-    public boolean delete(@PathVariable Integer id){
-        boolean reportExist = false;
-        if(id != null){
-            reportExist = true;
-        }
-        if (reportExist) {
-            return reportService.delete(id);
-        }
-        else return false;
+    @DeleteMapping("/delete/{id}")
+    public boolean delete(@PathVariable String id){
+       return reportService.delete(id);
     }
 
     @GetMapping("/all")

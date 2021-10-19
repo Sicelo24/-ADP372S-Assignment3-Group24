@@ -4,7 +4,7 @@ package za.ac.cput.service.entity;
  Service for Report
  Author: Mlungisi Xakekile (215126505)
  Date:  02 August 2021
-*/
+
 
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
@@ -22,7 +22,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class ReportServiceTest{
 
-    private static final ReportService reportSer = (ReportService) ReportService.getReportService();
+   // private static final ReportService reportSer;// = (ReportService) ReportService.getReportService();
     private static final Report report = ReportFactory.createReport("215126505",
             "Mr. M Xakekile",
             "02 August 2021");
@@ -69,4 +69,4 @@ public class ReportServiceTest{
         assertEquals(report, report);
         System.out.println("\nDisplay all Test: " + reportSet);
     }
-}
+} */
