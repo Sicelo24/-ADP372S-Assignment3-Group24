@@ -32,6 +32,27 @@ private String registerDate;
                 '}';
     }
 
+    public String getUserId() {
+        return userId;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPassword() {
+        return email;
+    }
+
+    public boolean getLoginStatus() {
+        return loginStatus;
+    }
+
+    public String getRegisterDate() {
+        return registerDate;
+    }
+
+
     public static class Builder{
     private String userId;
     private String email;
@@ -59,7 +80,10 @@ private String registerDate;
         this.registerDate = registerDate;
         return this;
     }
-    public UserAccount build(){
+
+
+
+        public UserAccount build(){
         return new UserAccount(this);
     }
     private Builder copy(UserAccount userAccount){

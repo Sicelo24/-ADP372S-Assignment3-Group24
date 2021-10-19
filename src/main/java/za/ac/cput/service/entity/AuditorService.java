@@ -50,6 +50,8 @@ public class AuditorService implements IAuditorService {
     public Set<Auditor> getAll(){
         return this.repository.findAll().stream().collect(Collectors.toSet());
     }
+
+
     public Set<Auditor> getAllAuditorsStartWithA(){
         Set<Auditor> auditorWithA = new HashSet<Auditor>();
         Set<Auditor> auditors = getAll();

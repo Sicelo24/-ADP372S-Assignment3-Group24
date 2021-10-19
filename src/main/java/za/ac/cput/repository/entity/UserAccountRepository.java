@@ -9,7 +9,7 @@ import za.ac.cput.repository.impl.IUserAccountRepository;
 
 import java.util.*;
 import java.util.Set;
-
+@Deprecated
 public class UserAccountRepository implements IUserAccountRepository {
     private static UserAccountRepository userAccountRepository = null;
     private Set<UserAccount> userAccountsDB;

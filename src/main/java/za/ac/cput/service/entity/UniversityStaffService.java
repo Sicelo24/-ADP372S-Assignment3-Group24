@@ -1,11 +1,13 @@
 package za.ac.cput.service.entity;
 
+import org.springframework.stereotype.Service;
 import za.ac.cput.repository.entity.UniversityStaffRepository;
 import za.ac.cput.service.impl.IUniversityStaff;
 import za.ac.cput.entity.UniversityStaff;
 
 import java.util.Set;
 
+@Service
 public class UniversityStaffService implements IUniversityStaff {
 
     private static UniversityStaffService universityStaffService = null;
