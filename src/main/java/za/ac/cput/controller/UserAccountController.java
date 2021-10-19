@@ -16,8 +16,7 @@ public class UserAccountController {
     private UserAccountService service;
 
     @GetMapping("/login/{email}/{password}")
-    public Set<UserAccount> login(@PathVariable String email, String password){
-        System.out.println("LOG IN PROVOKED!!!!!!!!!!!!");
+    public UserAccount login(@PathVariable String email, String password){
         return service.login(email, password);
     }
 

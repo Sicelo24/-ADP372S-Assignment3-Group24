@@ -17,12 +17,11 @@ public class UserAccountService implements IUserAccountService {
     private UserAccountRepository repository;
 
 
-    public Set<UserAccount> login(String email, String password){
+    public UserAccount login(String email, String password){
+        return null;
         //return this.repository.findByEmailAndPassword(email, password);
-      //  return this.repository.findById()
-       // return repository.findAll().stream().filter(issue -> issue.isResolved()).collect(Collectors.toSet());
         //return repository.findAll().stream().collect(Collectors.toSet());
-        return this.repository.findAll().stream().filter(userAccount -> userAccount.getEmail().equalsIgnoreCase(email) && userAccount.getPassword().equals(password)).collect(Collectors.toSet());
+        //return this.repository.findAll().stream().filter(userAccount -> userAccount.getEmail().equalsIgnoreCase(email) && userAccount.getPassword().equals(password)).collect(Collectors.toSet());
     }
 
     @Override
