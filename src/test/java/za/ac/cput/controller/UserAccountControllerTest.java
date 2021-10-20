@@ -28,7 +28,7 @@ class UserAccountControllerTest {
 
     @Test
     void login() {
-        String url = BASE_URL + "/login/xx@x/test";
+        String url = BASE_URL + "/login/az@za/123";
         ResponseEntity<UserAccount> response = restTemplate.getForEntity(url, UserAccount.class);
         assertNotNull(response);
         assertNotNull(response.getBody());
@@ -44,7 +44,7 @@ class UserAccountControllerTest {
     }
 
     @Test void d_getAll() {
-        String url = BASE_URL + "/login/xx@x/xx@x";
+        String url = BASE_URL + "/getall";
         HttpHeaders header = new HttpHeaders();
         HttpEntity<String> entity = new HttpEntity<>(null, header);
         ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.GET, entity, String.class);
