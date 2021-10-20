@@ -25,31 +25,23 @@ public class UniversityStaff implements Serializable {
         this.cellphone=builder.cellphone;
     }
 
-    public UniversityStaff create(UniversityStaff universityStaff) {
-        return universityStaff;
-    }
-
-    public UniversityStaff update(UniversityStaff universityStaff) {
-        return universityStaff;
-    }
-
     public static class Builder{
 
         private String staffID, staffFirstName, staffSurname, cellphone;
         public Builder staffID(String staffID){
-            this.staffID = this.staffID;
+            this.staffID = staffID;
             return this;
         }
         public Builder staffFirstName(String staffFirstName){
-            this.staffFirstName = this.staffFirstName;
+            this.staffFirstName = staffFirstName;
             return this;
         }
         public Builder staffSurname(String staffSurname){
-            this.staffSurname = this.staffSurname;
+            this.staffSurname = staffSurname;
             return this;
         }
         public Builder cellphone(String cellphone){
-            this.cellphone = this.cellphone;
+            this.cellphone = cellphone;
             return this;
         }
 

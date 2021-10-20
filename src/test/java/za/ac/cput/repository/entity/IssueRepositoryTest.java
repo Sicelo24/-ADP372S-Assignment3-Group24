@@ -17,10 +17,10 @@ import static org.junit.jupiter.api.Assertions.*;
 class IssueRepositoryTest {
 
     private static Issue issue = IssueFactory.createIssue("k229","No Elevator to 3rd floor", "Disability",
-            "05/06/21","NA",true, false,true);
+            "05/06/21","NA",0, 1,0);
 
     private static Issue issue_2 = IssueFactory.createIssue("k230","Not enough Lecturers", "Academic",
-            "","",true, false,false);
+            "","",0, 0,0);
 
     private static IssueRepository issueRepository = IssueRepository.createIssueRepository();
 

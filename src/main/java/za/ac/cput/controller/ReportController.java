@@ -20,6 +20,7 @@ public class ReportController {
         Report newReport = ReportFactory.
                 createReport(report.getReportId(),
                 report.getReportAuth(),
+                report.getReport(),
                 report.getReportDate());
         return reportService.create(newReport);
     }

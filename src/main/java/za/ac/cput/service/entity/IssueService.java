@@ -52,12 +52,12 @@ public class IssueService implements IIssueService {
     }
 
     @Override
-    public Set<Issue> getAllResolved() {
-        return repository.findAll().stream().filter(issue -> issue.isResolved()).collect(Collectors.toSet());
+    public Set<Issue> getAllClosed() {
+        return repository.findAll().stream().filter(issue -> issue.getIssueStatus() <= 0).collect(Collectors.toSet());
     }
 
     @Override
-    public Set<Issue> getAllUnResolved() {
-        return repository.findAll().stream().filter(issue -> !issue.isResolved()).collect(Collectors.toSet());
+    public Set<Issue> getAllOpen() {
+        return repository.findAll().stream().filter(issue -> issue.getIssueStatus() > 0).collect(Collectors.toSet());
     }
 }

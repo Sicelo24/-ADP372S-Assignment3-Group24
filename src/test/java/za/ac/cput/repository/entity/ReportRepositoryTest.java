@@ -17,7 +17,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class ReportRepositoryTest {
     private static IReportRepository reportRepository = ReportRepository.geReportRepository();
     private static Report report = ReportFactory.createReport("215126505",
-            "Mlungisi Xakekile",
+            "Mlungisi Xakekile","NA",
             "2021/03/16");
 
     @Test

@@ -30,10 +30,11 @@ public class UniversityStaffController {
         return UniversityStaff.update(UniversityStaf);
     }
 
-    @DeleteMapping("/delete")
-    public String delete(@RequestBody String id){
+    @DeleteMapping("/delete/{id}")
+    public String delete(@PathVariable String id){
         return UniversityStaff.delete(id) ? "Successfully deleted." : "Could NOT Perform delete operation!";
     }
+
 
     @GetMapping("/getall")
     public Set<UniversityStaff> getAll() {

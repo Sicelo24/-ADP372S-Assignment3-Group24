@@ -23,6 +23,7 @@ class ReportControllerTest {
 
     private static Report report = ReportFactory.createReport("215126505"
             ,"Mr. Xakekile"
+            ,"NA"
             , "20/09/2021");
 
     @Autowired

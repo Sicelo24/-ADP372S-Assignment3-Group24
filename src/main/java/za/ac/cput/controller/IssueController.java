@@ -25,7 +25,7 @@ public class IssueController {
     public Issue create(@RequestBody Issue issue) {
         Issue newIssue = IssueFactory.createIssue(issue.getIssueId(), issue.getIssueDescription(),
                 issue.getIssueArea(), issue.getIssueRaisedDate(), issue.getIssueResolvedDate(),
-                issue.isIssueStatus(), issue.isResolved(), issue.isValidated());
+                issue.getIssueStatus(), issue.getIsResolved(), issue.getIsValidated());
         return this.service.create(newIssue);
     }
 
@@ -49,14 +49,14 @@ public class IssueController {
         return service.getAll();
     }
 
-    @GetMapping("/getallresolved")
-    public Set<Issue> getAllResolved() {
-        return service.getAllResolved();
+    @GetMapping("/getallclosed")
+    public Set<Issue> getAllClosed() {
+        return service.getAllClosed();
     }
 
-    @GetMapping("/getallunresolved")
-    public Set<Issue> getAllUnResolved() {
-        return service.getAllUnResolved();
+    @GetMapping("/getallopen")
+    public Set<Issue> getAllOpen() {
+        return service.getAllOpen();
     }
 
 }

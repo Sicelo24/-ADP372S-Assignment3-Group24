@@ -14,7 +14,7 @@ import java.io.Serializable;
 public class Report implements Serializable {
     @Id
     private String reportId;
-    private String reportAuth, reportDate;
+    private String reportAuth, report, reportDate;
 
 
     private Report(){}
@@ -22,11 +22,16 @@ public class Report implements Serializable {
     private Report( Builder builder) {
         this.reportId = builder.reportId;
         this.reportAuth = builder.reportAuth;
+        this.report = builder.report;
         this.reportDate = builder.reportDate;
     }
 
     public String getReportId() {
         return reportId;
+    }
+
+    public String getReport() {
+        return report;
     }
 
     public String getReportAuth() {
@@ -43,16 +48,22 @@ public class Report implements Serializable {
         return "Report{" +
                 "reportId=" + reportId +
                 ", reportAuth=" + reportAuth +
+                ", report=" + report +
                 ", reportDate=" + reportDate +
                 '}';
     }
 
 
     public static class Builder {
-        private String reportId, reportAuth, reportDate;
+        private String reportId, reportAuth, reportDate, report;
 
         public Builder setReportId(String reportId) {
             this.reportId = reportId;
+            return this;
+        }
+
+        public Builder setReport(String report) {
+            this.report = report;
             return this;
         }
 
@@ -70,6 +81,7 @@ public class Report implements Serializable {
             this.reportId = report.reportId;
             this.reportAuth = report.reportAuth;
             this.reportDate = report.reportDate;
+            this.report = report.report;
             return this;
         }
 
