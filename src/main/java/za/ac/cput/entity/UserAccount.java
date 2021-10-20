@@ -50,7 +50,7 @@ public class UserAccount implements Serializable {
     }
 
     public String getPassword() {
-        return email;
+        return password;
     }
 
     public int getLoginStatus() {

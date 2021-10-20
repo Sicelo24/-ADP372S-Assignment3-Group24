@@ -6,10 +6,12 @@ package za.ac.cput.service.impl;
  Date:  02 August 2021
 */
 
+import org.springframework.stereotype.Repository;
 import za.ac.cput.entity.Report;
 import za.ac.cput.service.IService;
 import java.util.Set;
 
+@Repository
 public interface IReportService extends IService<Report, String> {
     Set<Report> getAll();
 }

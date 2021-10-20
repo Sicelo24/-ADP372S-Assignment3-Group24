@@ -22,7 +22,7 @@ class IssueServiceTest {
     @Autowired
     private static IssueService service;
     private static Issue issue = IssueFactory.createIssue("k227","No Elevator to 3rd floor", "Disability",
-            "05/06/21","NA",true, false,true);
+            "05/06/21","NA",1, 0,1);
 
     @Test
     void a_create() {

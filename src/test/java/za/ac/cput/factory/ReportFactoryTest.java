@@ -1,4 +1,4 @@
-package za.ac.cput.Factory;
+package za.ac.cput.factory;
 
 /*
  Entity for ReportFactoryTest
@@ -27,11 +27,13 @@ public class ReportFactoryTest {
         r1 = ReportFactory.createReport(
                 "215126505"
                 ,"Mlungisi Xakekile"
+                , "NA"
                 ,"09 June 2021");
 
         r2 = ReportFactory.createReport(
                 "215100002"
                 ,"President"
+                ,"NA"
                 ,"09 June 2021");
     }
     @Test

@@ -18,7 +18,7 @@ class IssueControllerTest {
 
     @Autowired
     private TestRestTemplate restTemplate;
-    private static Issue issue = IssueFactory.createIssue("k228","More Security is needed","Admin Building","31/05/19","NA",true, true,true);
+    private static Issue issue = IssueFactory.createIssue("k228","More Security is needed","Admin Building","31/05/19","NA",1, 1,1);
     private final String BASE_URL = "http://localhost:8080/issue";
 
     @Test @Disabled("Disabled create") void a_create() {
@@ -67,7 +67,7 @@ class IssueControllerTest {
     }
 
     @Test void f_getResolved() {
-        String url = BASE_URL + "/getallresolved";
+        String url = BASE_URL + "/getallopen";
         HttpHeaders header = new HttpHeaders();
         HttpEntity<String> entity = new HttpEntity<>(null, header);
         ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.GET, entity, String.class);
