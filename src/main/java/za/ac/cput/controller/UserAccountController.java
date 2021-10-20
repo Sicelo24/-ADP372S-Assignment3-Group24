@@ -16,7 +16,7 @@ public class UserAccountController {
     private UserAccountService service;
 
     @GetMapping("/login/{email}/{password}")
-    public UserAccount login(@PathVariable String email, String password){
+    public UserAccount login(@PathVariable String email,@PathVariable String password){
         return service.login(email, password);
     }
 

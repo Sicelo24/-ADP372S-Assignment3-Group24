@@ -18,10 +18,7 @@ public class UserAccountService implements IUserAccountService {
 
 
     public UserAccount login(String email, String password){
-
         return this.repository.findByEmailAndPassword(email, password);
-        //return repository.findAll().stream().collect(Collectors.toSet());
-        //return this.repository.findAll().stream().filter(userAccount -> userAccount.getEmail().equalsIgnoreCase(email) && userAccount.getPassword().equals(password)).collect(Collectors.toSet());
     }
 
     @Override
