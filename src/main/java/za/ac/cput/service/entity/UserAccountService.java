@@ -46,4 +46,16 @@ public class UserAccountService implements IUserAccountService {
     public Set<UserAccount> getAll() {
         return repository.findAll().stream().collect(Collectors.toSet());
     }
+
+    @Override
+    public UserAccount blockUser(String userId) {
+        UserAccount block = this.read(userId);
+        block = new UserAccount.Builder().copy(block).setloginStatus(-1).build();
+        return this.update(block);
+    }
+
+    @Override
+    public UserAccount getByEmail(String email) {
+        return this.repository.findByEmail(email);
+    }
 }

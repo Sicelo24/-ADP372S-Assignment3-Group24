@@ -11,4 +11,5 @@ import java.util.Set;
 @Repository
 public interface UserAccountRepository extends JpaRepository<UserAccount, String> {
     UserAccount findByEmailAndPassword(String email, String Password);
+    UserAccount findByEmail(String email);
 }
