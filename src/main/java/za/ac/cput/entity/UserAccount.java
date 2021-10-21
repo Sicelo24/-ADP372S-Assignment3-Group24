@@ -95,7 +95,8 @@ public class UserAccount implements Serializable {
         public UserAccount build(){
         return new UserAccount(this);
     }
-    private Builder copy(UserAccount userAccount){
+
+    public  Builder copy(UserAccount userAccount){
 
         this.userId = userAccount.userId;
         this.email = userAccount.email;

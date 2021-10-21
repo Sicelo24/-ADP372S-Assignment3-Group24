@@ -46,4 +46,14 @@ public class UserAccountController {
         return service.getAll();
     }
 
+    @GetMapping("/blockuser/{id}")
+    public UserAccount blockUser(@PathVariable String id) {
+        return service.blockUser(id);
+    }
+
+    @GetMapping("/readbyemail/{email}")
+    public UserAccount readByEmail(@PathVariable String email) {
+        return service.getByEmail(email);
+    }
+
 }

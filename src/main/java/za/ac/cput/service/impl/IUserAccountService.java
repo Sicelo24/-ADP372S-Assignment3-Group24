@@ -9,4 +9,7 @@ import java.util.Set;
 public interface IUserAccountService extends IService<UserAccount, String> {
 
     public Set<UserAccount> getAll();
+    public UserAccount blockUser(String userId);
+
+    public UserAccount getByEmail(String email);
 }
